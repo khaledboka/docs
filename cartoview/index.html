@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Cartologic">
-        <link rel="canonical" href="http://cartologic.com/cartoview/">
+        <link rel="canonical" href="http://www.cartologic.com/cartoview/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
 	<title>Cartoview - Cartologic</title>
@@ -49,15 +49,11 @@
             <!-- Main navigation -->
             <ul class="nav navbar-nav">
             
-            
-                <li >
-                    <a href="..">Home</a>
-                </li>
-            
-            
-            
                 <li class="active">
                     <a href="./">Cartoview</a>
+                </li>
+				<li>
+                    <a href="http://cartoview.org">GeoApp Market</a>
                 </li>
             
             
@@ -117,6 +113,18 @@
         <li class="main "><a href="#install-on-windows">Install on Windows</a></li>
         
     
+        <li class="main "><a href="#existing-geonode-users">Existing GeoNode Users</a></li>
+        
+    
+        <li class="main "><a href="#issues">Issues</a></li>
+        
+    
+        <li class="main "><a href="#for-developers">For Developers</a></li>
+        
+    
+        <li class="main "><a href="#develope-your-own-app">Develope your own App</a></li>
+        
+    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
@@ -128,15 +136,17 @@
 <h1 id="key-features">Key Features</h1>
 <p>App Market for GIS Web Application
 Once you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser</p>
-<p>CartoView levereages the data management and security infrastructures to deploy and serve GIS applications
-Developers create applications and deploy them the the app store at www.cartoview.org
-Once the app is deployed it will become available to all Cartoview deployments</p>
+<p>CartoView levereages the data management and security infrastructures to deploy and serve GIS applications</p>
+<p>Developers create applications and deploy them on the <a href="../www.cartoview.org">App store</a></p>
+<p>Once the app is deployed it will become available to all Cartoview deployments</p>
 <h1 id="demos">Demos</h1>
-<p>You can take cartoview for a test here
-demo.cartoview.org
-Create your account, load some test data and start authoring web mapping applicaitons</p>
+<p>You can take cartoview for a test <a href="../demo.cartoview.org">here</a></p>
+<p>Create your account, load some test data and start authoring web mapping applicaitons</p>
 <h1 id="install-on-ubuntu-linux">Install On Ubuntu linux</h1>
 <ul>
+<li>
+<p>Install <a href="https://github.com/GeoNode/geonode">Geonode</a> </p>
+</li>
 <li>
 <p>Install CartoView Libraries</p>
 <p><code>$ pip install cartoview</code></p>
@@ -168,22 +178,74 @@ Create your account, load some test data and start authoring web mapping applica
 <li>
 <p><code>$python manage.py loaddata json/default_oauth_apps.json</code></p>
 </li>
+<li><strong>Note:</strong> Don&rsquo;t Forget to Change <code>&lt;your_project_name&gt;</code> to desired name.</li>
 </ul>
 </li>
 </ul>
 <h1 id="test-server-development">Test Server (Development)</h1>
 <ul>
 <li>
-<p>To start Development Server</p>
+<p>To start Development Server run this Command :</p>
 <p><code>python manage.py runserver 0.0.0.0:8000</code></p>
 </li>
 </ul>
 <h1 id="install-on-windows">Install on Windows</h1>
-<p>We recommend to use Docker</p>
+<p><strong>We recommend to use Docker</strong></p>
 <ul>
 <li>Install Docker or Docker toolbox</li>
 <li>Run docker container to install geonode</li>
 <li>Continue as above</li>
+</ul>
+<h1 id="existing-geonode-users">Existing GeoNode Users</h1>
+<p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
+<ul>
+<li>
+<p><code>$ pip install cartoview == &lt;version&gt;</code></p>
+</li>
+<li>
+<p><code>$ django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip  &lt;your_project_name&gt;</code></p>
+</li>
+<li>
+<p><code>$ cd &lt;your_project_name&gt;</code></p>
+</li>
+<li>
+<p><code>$ bower install</code></p>
+</li>
+<li>
+<p><code>$python manage.py makemigrations app_manager</code></p>
+</li>
+<li>
+<p><code>$python manage.py migrate</code></p>
+</li>
+</ul>
+<h1 id="issues">Issues</h1>
+<p>If something isn&rsquo;t working the way you expected, please take a look at <a href="https://github.com/cartologic/cartoview/issues">previous issues</a> that resolve common problems first.</p>
+<p>Have you found a new bug? Want to request a new feature? We&rsquo;d love to hear from you. Please let us know by submitting an issue.</p>
+<h1 id="for-developers">For Developers</h1>
+<ul>
+<li><strong>Cartoview Provides a <a href="../www.cartoview.org">GeoApp Market</a> for GIS Developers.</strong></li>
+</ul>
+<h1 id="develope-your-own-app">Develope your own App</h1>
+<ul>
+<li>
+<p>Create a new empty app from cartoview app template as follow in your cartoview project directory</p>
+<p><code>$python manage.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip simple_app apps/</code></p>
+</li>
+<li>
+<p>Edit cartoview_project/apps/apps.yml and add entry for your app</p>
+<pre><code>- name: app_name
+  active: true
+  order: 0
+</code></pre>
+</li>
+<li>
+<p>Add the App to the database form django admin interface</p>
+<p><img alt="New App" src="../img/developers_app.png" /></p>
+</li>
+<li>
+<p>Now on Cartoview in Apps tab your app will Appear Some thing like this</p>
+<p><img alt="App Panel" src="../img/apps_panel.PNG" /></p>
+</li>
 </ul></div>
         </div>
 
