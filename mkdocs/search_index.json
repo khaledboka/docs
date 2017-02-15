@@ -1,0 +1,49 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Cartologic", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-cartologic", 
+            "text": "", 
+            "title": "Welcome to Cartologic"
+        }, 
+        {
+            "location": "/cartoview/", 
+            "text": "About Cartoview\n\n\nCartoview extends the popular GeoNode SDI to provide the ability to create, share, and visualize GIS Web Mapping Applications very easily and very quickly from the browser without programming.\n\n\nCartoview enables communities of users to share geospatial applications, to collaborate on these applications, and to exchange the underlying data as Open Geospatial Consortium (OGC) compliant web services\n\n\nCartoview has been built utilizing open source software and open standards to make it available for all GIS operators and to maximize interoperability.\n\n\nKey Features\n\n\nApp Market for GIS Web Application\nOnce you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser\n\n\nCartoView levereages the data management and security infrastructures to deploy and serve GIS applications\nDevelopers create applications and deploy them the the app store at www.cartoview.org\nOnce the app is deployed it will become available to all Cartoview deployments\n\n\nDemos\n\n\nYou can take cartoview for a test here\ndemo.cartoview.org\nCreate your account, load some test data and start authoring web mapping applicaitons\n\n\nInstall On Ubuntu linux\n\n\n\n\n\n\nInstall CartoView Libraries\n\n\n$ pip install cartoview\n\n\n\n\n\n\nInstall CartoView_Django Project\n\n\n\n\n\n\n$django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip  \nyour_project_name\n\n\n\n\n\n\n$cd \nyour_project_name\n\n\n\n\n\n\n$bower install\n\n\n\n\n\n\n$python manage.py makemigrations app_manager\n\n\n\n\n\n\n$python manage.py migrate people\n\n\n\n\n\n\n$python manage.py migrate\n\n\n\n\n\n\n$python manage.py loaddata sample_admin.json\n\n\n\n\n\n\n$python manage.py loaddata json/default_oauth_apps.json\n\n\n\n\n\n\n\n\n\n\nTest Server (Development)\n\n\n\n\n\n\nTo start Development Server\n\n\npython manage.py runserver 0.0.0.0:8000\n\n\n\n\n\n\nInstall on Windows\n\n\nWe recommend to use Docker\n\n\n\n\nInstall Docker or Docker toolbox\n\n\nRun docker container to install geonode\n\n\nContinue as above", 
+            "title": "Cartoview"
+        }, 
+        {
+            "location": "/cartoview/#about-cartoview", 
+            "text": "Cartoview extends the popular GeoNode SDI to provide the ability to create, share, and visualize GIS Web Mapping Applications very easily and very quickly from the browser without programming.  Cartoview enables communities of users to share geospatial applications, to collaborate on these applications, and to exchange the underlying data as Open Geospatial Consortium (OGC) compliant web services  Cartoview has been built utilizing open source software and open standards to make it available for all GIS operators and to maximize interoperability.", 
+            "title": "About Cartoview"
+        }, 
+        {
+            "location": "/cartoview/#key-features", 
+            "text": "App Market for GIS Web Application\nOnce you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser  CartoView levereages the data management and security infrastructures to deploy and serve GIS applications\nDevelopers create applications and deploy them the the app store at www.cartoview.org\nOnce the app is deployed it will become available to all Cartoview deployments", 
+            "title": "Key Features"
+        }, 
+        {
+            "location": "/cartoview/#demos", 
+            "text": "You can take cartoview for a test here\ndemo.cartoview.org\nCreate your account, load some test data and start authoring web mapping applicaitons", 
+            "title": "Demos"
+        }, 
+        {
+            "location": "/cartoview/#install-on-ubuntu-linux", 
+            "text": "Install CartoView Libraries  $ pip install cartoview    Install CartoView_Django Project    $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip   your_project_name    $cd  your_project_name    $bower install    $python manage.py makemigrations app_manager    $python manage.py migrate people    $python manage.py migrate    $python manage.py loaddata sample_admin.json    $python manage.py loaddata json/default_oauth_apps.json", 
+            "title": "Install On Ubuntu linux"
+        }, 
+        {
+            "location": "/cartoview/#test-server-development", 
+            "text": "To start Development Server  python manage.py runserver 0.0.0.0:8000", 
+            "title": "Test Server (Development)"
+        }, 
+        {
+            "location": "/cartoview/#install-on-windows", 
+            "text": "We recommend to use Docker   Install Docker or Docker toolbox  Run docker container to install geonode  Continue as above", 
+            "title": "Install on Windows"
+        }
+    ]
+}

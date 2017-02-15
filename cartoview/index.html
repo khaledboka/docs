@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="GIS Web Mapping Applications.Cartoview enables the rapid deployment of easy-to-manage and easy-to-use spatial web applications">
+        
         <meta name="author" content="Cartologic">
-        <link rel="canonical" href="http://cartologic.com/">
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="canonical" href="http://cartologic.com/cartoview/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Cartologic</title>
+	<title>Cartoview - Cartologic</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Cartologic</a>
+            <a class="navbar-brand" href="..">Cartologic</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -50,14 +50,14 @@
             <ul class="nav navbar-nav">
             
             
-                <li class="active">
-                    <a href=".">Home</a>
+                <li >
+                    <a href="..">Home</a>
                 </li>
             
             
             
-                <li >
-                    <a href="cartoview/">Cartoview</a>
+                <li class="active">
+                    <a href="./">Cartoview</a>
                 </li>
             
             
@@ -70,13 +70,13 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="..">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="cartoview/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -99,15 +99,92 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#welcome-to-cartologic">Welcome to Cartologic</a></li>
+        <li class="main active"><a href="#about-cartoview">About Cartoview</a></li>
+        
+    
+        <li class="main "><a href="#key-features">Key Features</a></li>
+        
+    
+        <li class="main "><a href="#demos">Demos</a></li>
+        
+    
+        <li class="main "><a href="#install-on-ubuntu-linux">Install On Ubuntu linux</a></li>
+        
+    
+        <li class="main "><a href="#test-server-development">Test Server (Development)</a></li>
+        
+    
+        <li class="main "><a href="#install-on-windows">Install on Windows</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-cartologic">Welcome to Cartologic</h1>
-<p><img alt="Cartologic" src="./img/LOGO_BIG.png" /></p></div>
+<h1 id="about-cartoview">About Cartoview</h1>
+<p>Cartoview extends the popular GeoNode SDI to provide the ability to create, share, and visualize GIS Web Mapping Applications very easily and very quickly from the browser without programming.</p>
+<p>Cartoview enables communities of users to share geospatial applications, to collaborate on these applications, and to exchange the underlying data as Open Geospatial Consortium (OGC) compliant web services</p>
+<p>Cartoview has been built utilizing open source software and open standards to make it available for all GIS operators and to maximize interoperability.</p>
+<h1 id="key-features">Key Features</h1>
+<p>App Market for GIS Web Application
+Once you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser</p>
+<p>CartoView levereages the data management and security infrastructures to deploy and serve GIS applications
+Developers create applications and deploy them the the app store at www.cartoview.org
+Once the app is deployed it will become available to all Cartoview deployments</p>
+<h1 id="demos">Demos</h1>
+<p>You can take cartoview for a test here
+demo.cartoview.org
+Create your account, load some test data and start authoring web mapping applicaitons</p>
+<h1 id="install-on-ubuntu-linux">Install On Ubuntu linux</h1>
+<ul>
+<li>
+<p>Install CartoView Libraries</p>
+<p><code>$ pip install cartoview</code></p>
+</li>
+<li>
+<p>Install CartoView_Django Project</p>
+<ul>
+<li>
+<p><code>$django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip  &lt;your_project_name&gt;</code></p>
+</li>
+<li>
+<p><code>$cd &lt;your_project_name&gt;</code></p>
+</li>
+<li>
+<p><code>$bower install</code></p>
+</li>
+<li>
+<p><code>$python manage.py makemigrations app_manager</code></p>
+</li>
+<li>
+<p><code>$python manage.py migrate people</code></p>
+</li>
+<li>
+<p><code>$python manage.py migrate</code></p>
+</li>
+<li>
+<p><code>$python manage.py loaddata sample_admin.json</code></p>
+</li>
+<li>
+<p><code>$python manage.py loaddata json/default_oauth_apps.json</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="test-server-development">Test Server (Development)</h1>
+<ul>
+<li>
+<p>To start Development Server</p>
+<p><code>python manage.py runserver 0.0.0.0:8000</code></p>
+</li>
+</ul>
+<h1 id="install-on-windows">Install on Windows</h1>
+<p>We recommend to use Docker</p>
+<ul>
+<li>Install Docker or Docker toolbox</li>
+<li>Run docker container to install geonode</li>
+<li>Continue as above</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -118,12 +195,12 @@
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
