@@ -48,6 +48,7 @@
         <div class="navbar-collapse collapse">
             <!-- Main navigation -->
             <ul class="nav navbar-nav">
+ 
                 <li class="active">
                     <a href="./">Cartoview</a>
                 </li>
@@ -200,6 +201,10 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 <h1 id="install-on-ubuntu-linux">Install On Ubuntu linux</h1>
 <ul>
+<li><strong>Requirements:</strong><ul>
+<li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
+</ul>
+</li>
 <li>
 <p>Install <a href="https://github.com/GeoNode/geonode">Geonode</a> </p>
 </li>
@@ -260,6 +265,12 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
 <ul>
 <li>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
+</ul>
+</li>
+<li>
 <p><code>$ pip install cartoview == &lt;version&gt;</code></p>
 </li>
 <li>
@@ -289,6 +300,12 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <li>
 <p><strong>Develope your own App</strong></p>
 <ul>
+<li>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
+</ul>
+</li>
 <li>
 <p>Create a new empty app from cartoview app template as follow in your cartoview project directory</p>
 <p><code>$python manage.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip simple_app apps/</code></p>
