@@ -48,12 +48,11 @@
         <div class="navbar-collapse collapse">
             <!-- Main navigation -->
             <ul class="nav navbar-nav">
-            
                 <li class="active">
                     <a href="./">Cartoview</a>
                 </li>
 				<li>
-                    <a href="http://cartoview.org">GeoApp Market</a>
+                    <a href="http://cartoview.org">Geo App Market</a>
                 </li>
             
             
@@ -104,6 +103,9 @@
         <li class="main "><a href="#demos">Demos</a></li>
         
     
+        <li class="main "><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+        
+    
         <li class="main "><a href="#install-on-ubuntu-linux">Install On Ubuntu linux</a></li>
         
     
@@ -119,9 +121,6 @@
         <li class="main "><a href="#for-developers">For Developers</a></li>
         
     
-        <li class="main "><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
-        
-    
         <li class="main "><a href="#contributing-to-cartoview">Contributing to CartoView</a></li>
         
     
@@ -134,14 +133,71 @@
 <p>Cartoview enables communities of users to share geospatial applications, to collaborate on these applications, and to exchange the underlying data as Open Geospatial Consortium (OGC) compliant web services</p>
 <p>Cartoview has been built utilizing open source software and open standards to make it available for all GIS operators and to maximize interoperability.</p>
 <h1 id="key-features">Key Features</h1>
-<p>App Market for GIS Web Application
+<p><a href="../www.cartoview.org">App Market</a> for GIS Web Application
 Once you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser</p>
-<p>CartoView levereages the data management and security infrastructures to deploy and serve GIS applications</p>
-<p>Developers create applications and deploy them on the <a href="../www.cartoview.org">App store</a></p>
+<p>CartoView levereages the data management and security infrastructures of <a href="https://github.com/GeoNode/geonode">GeoNode</a> to deploy and serve GIS applications</p>
+<p>Developers create applications and deploy them on the <a href="../www.cartoview.org">App Market</a></p>
 <p>Once the app is deployed it will become available to all Cartoview deployments</p>
 <h1 id="demos">Demos</h1>
 <p>You can take cartoview for a test <a href="../demo.cartoview.org">here</a></p>
 <p>Create your account, load some test data and start authoring web mapping applicaitons</p>
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<ul>
+<li>
+<p><h3>What exactly is CartoView? Is it a replacement for GeoNode?</h3></p>
+<ul>
+<li>CartoView is <a href="../www.cartoview.org">Geo App market</a> for GeoNode. It is not a fork / improvement / reprlacement of Geonode, but rather additional code aimed at making it more extensible to integrate third party apps directly from the browser.</li>
+</ul>
+</li>
+<li>
+<p><h3>What are the goals of Cartoview?</h3></p>
+<ul>
+<li>Sharing GIS Apps</li>
+<li>Provide apps for common tasks like visualizing and querying feature services.</li>
+<li>Extend the functions of the GeoNode SDI beyond data management</li>
+<li>Provide a solid core of utilities that can be used to help developers integrate and deploy their Geo apps </li>
+<li>Foster an ecosystem of apps extending easily deplyable and installable</li>
+</ul>
+</li>
+<li>
+<p><h3>Can I use CartoView with GeoNode Version 2.4 and earlier?</h3></p>
+<ul>
+<li>CartoView starts working with GeoNode 2.6</li>
+</ul>
+</li>
+<li>
+<p><h3>I have an idea! What should I do?</h3></p>
+<ul>
+<li>Please file an issue. <a href="https://github.com/cartologic/cartoview/issues">Issues</a> are a great way to discuss new ideas, build consensus and talk about implementation details.</li>
+</ul>
+</li>
+<li>
+<p><h3>I built something with Esri cartoview cam I show you?</h3></p>
+<ul>
+<li>Absolutely! Share it on twitter with <a href="https://twitter.com/ahmednosman">@ahmednosman</a> <a href="https://twitter.com/cartoview">@cartoview</a>. You can add your project to the list in the readme too.</li>
+</ul>
+</li>
+<li>
+<p><h3>I built a reusable app  can I contribute it?</h3></p>
+<ul>
+<li>Ofcourse. This is the purpose of Cartoview. Read the instructions on developing and deploying apps. Create an account on cartoview.org and load your app. Your app will be immediately available to all Cartoview deployments</li>
+</ul>
+</li>
+<li>
+<p><h3>What are some good CartoView Apps?</h3></p>
+<ul>
+<li><a href="http://cartoview.org/app/cartoview_map_viewer/">Simple Map Viewer</a> : This app allows the creation of html mobile ready viewer app with most basic features.</li>
+<li><a href="http://cartoview.org/app/cartoview_feature_list/">Feature Detailed Viewer</a> : A map and list applications for store locations or similar usage</li>
+<li><a href="http://cartoview.org/app/cartoview_geonode_viewer/">WebApp Builder</a> : A customizable GIS </li>
+</ul>
+</li>
+<li>
+<p><h3>Running CartoView on GeoNode and QGIS Server?</h3></p>
+<ul>
+<li>There is no reason for Cartoview not to work on this deployment. (This was never tested). Apps relying on GeoServer ofcourse will not work</li>
+</ul>
+</li>
+</ul>
 <h1 id="install-on-ubuntu-linux">Install On Ubuntu linux</h1>
 <ul>
 <li>
@@ -255,63 +311,6 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <li>
 <p>Now Zip your App and Upload it to <a href="../www.cartoview.org">GeoApp Market</a></p>
 </li>
-</ul>
-</li>
-</ul>
-<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
-<ul>
-<li>
-<p><h3>What exactly is CartoView? Is it a replacement for GeoNode?</h3></p>
-<ul>
-<li>CartoView is <a href="../www.cartoview.org">Geo App market</a> for GeoNode. It is not a fork / improvement / reprlacement of Geonode, but rather additional code aimed at making it more extensible to integrate third party apps directly from the browser.</li>
-</ul>
-</li>
-<li>
-<p><h3>What are the goals of Cartoview?</h3></p>
-<ul>
-<li>Sharing GIS Apps</li>
-<li>Provide apps for common tasks like visualizing and querying feature services.</li>
-<li>Extend the functions of the GeoNode SDI beyond data management</li>
-<li>Provide a solid core of utilities that can be used to help developers integrate and deploy their Geo apps </li>
-<li>Foster an ecosystem of apps extending easily deplyable and installable</li>
-</ul>
-</li>
-<li>
-<p><h3>Can I use CartoView with GeoNode Version 2.4 and earlier?</h3></p>
-<ul>
-<li>CartoView starts working with GeoNode 2.6</li>
-</ul>
-</li>
-<li>
-<p><h3>I have an idea! What should I do?</h3></p>
-<ul>
-<li>Please file an issue. <a href="https://github.com/cartologic/cartoview/issues">Issues</a> are a great way to discuss new ideas, build consensus and talk about implementation details.</li>
-</ul>
-</li>
-<li>
-<p><h3>I built something with Esri cartoview cam I show you?</h3></p>
-<ul>
-<li>Absolutely! Share it on twitter with <a href="https://twitter.com/ahmednosman">@ahmednosman</a> <a href="https://twitter.com/cartoview">@cartoview</a>. You can add your project to the list in the readme too.</li>
-</ul>
-</li>
-<li>
-<p><h3>I built a reusable app  can I contribute it?</h3></p>
-<ul>
-<li>Ofcourse. This is the purpose of Cartoview. Read the instructions on developing and deploying apps. Create an account on cartoview.org and load your app. Your app will be immediately available to all Cartoview deployments</li>
-</ul>
-</li>
-<li>
-<p><h3>What are some good CartoView Apps?</h3></p>
-<ul>
-<li><a href="http://cartoview.org/app/cartoview_map_viewer/">Simple Map Viewer</a> : This app allows the creation of html mobile ready viewer app with most basic features.</li>
-<li><a href="http://cartoview.org/app/cartoview_feature_list/">Feature Detailed Viewer</a> : A map and list applications for store locations or similar usage</li>
-<li><a href="http://cartoview.org/app/cartoview_geonode_viewer/">WebApp Builder</a> : A customizable GIS </li>
-</ul>
-</li>
-<li>
-<p><h3>Running CartoView on GeoNode and QGIS Server?</h3></p>
-<ul>
-<li>There is no reason for Cartoview not to work on this deployment. (This was never tested). Apps relying on GeoServer ofcourse will not work</li>
 </ul>
 </li>
 </ul>
