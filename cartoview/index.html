@@ -48,12 +48,11 @@
         <div class="navbar-collapse collapse">
             <!-- Main navigation -->
             <ul class="nav navbar-nav">
- 
                 <li class="active">
                     <a href="./">Cartoview</a>
                 </li>
-				<li>
-                    <a href="http://cartoview.org">Geo App Market</a>
+				<li >
+                    <a href="http://cartoview.org" target="_blank">Geo App Market</a>
                 </li>
             
             
@@ -134,20 +133,20 @@
 <p>Cartoview enables communities of users to share geospatial applications, to collaborate on these applications, and to exchange the underlying data as Open Geospatial Consortium (OGC) compliant web services</p>
 <p>Cartoview has been built utilizing open source software and open standards to make it available for all GIS operators and to maximize interoperability.</p>
 <h1 id="key-features">Key Features</h1>
-<p><a href="../www.cartoview.org">App Market</a> for GIS Web Application
+<p><a href="http://www.cartoview.org">App Market</a> for GIS Web Application
 Once you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser</p>
 <p>CartoView levereages the data management and security infrastructures of <a href="https://github.com/GeoNode/geonode">GeoNode</a> to deploy and serve GIS applications</p>
-<p>Developers create applications and deploy them on the <a href="../www.cartoview.org">App Market</a></p>
+<p>Developers create applications and deploy them on the <a href="http://www.cartoview.org">App Market</a></p>
 <p>Once the app is deployed it will become available to all Cartoview deployments</p>
 <h1 id="demos">Demos</h1>
-<p>You can take cartoview for a test <a href="../demo.cartoview.org">here</a></p>
+<p>You can take cartoview for a test <a href="http://demo.cartoview.org">here</a></p>
 <p>Create your account, load some test data and start authoring web mapping applicaitons</p>
 <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 <ul>
 <li>
 <p><h3>What exactly is CartoView? Is it a replacement for GeoNode?</h3></p>
 <ul>
-<li>CartoView is <a href="../www.cartoview.org">Geo App market</a> for GeoNode. It is not a fork / improvement / reprlacement of Geonode, but rather additional code aimed at making it more extensible to integrate third party apps directly from the browser.</li>
+<li>CartoView is <a href="http://www.cartoview.org">Geo App market</a> for GeoNode. It is not a fork / improvement / reprlacement of Geonode, but rather additional code aimed at making it more extensible to integrate third party apps directly from the browser.</li>
 </ul>
 </li>
 <li>
@@ -175,7 +174,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <li>
 <p><h3>I built something with Esri cartoview cam I show you?</h3></p>
 <ul>
-<li>Absolutely! Share it on twitter with <a href="https://twitter.com/ahmednosman">@ahmednosman</a> <a href="https://twitter.com/cartoview">@cartoview</a>. You can add your project to the list in the readme too.</li>
+<li>Absolutely! Share it on twitter with <a href="https://twitter.com/ahmednosman">@ahmednosman</a> , <a href="https://twitter.com/cartoview">@cartoview</a>. You can add your project to the list in the readme too.</li>
 </ul>
 </li>
 <li>
@@ -206,7 +205,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 </li>
 <li>
-<p>Install <a href="https://github.com/GeoNode/geonode">Geonode</a> </p>
+<p>Install <a href="https://github.com/GeoNode/geonode">Geonode == 2.5.15</a> </p>
 </li>
 <li>
 <p>Install CartoView Libraries</p>
@@ -268,6 +267,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <p><strong>Requirements:</strong></p>
 <ul>
 <li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
+<li><strong> GeoNode == 2.5.15 </strong></li>
 </ul>
 </li>
 <li>
@@ -288,6 +288,15 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <li>
 <p><code>$python manage.py migrate</code></p>
 </li>
+<li>
+<p><code>$python manage.py collectstatic --noinput</code></p>
+</li>
+<li>
+<p>Now Development Server :</p>
+<ul>
+<li><code>$python manage.py runserver 0.0.0.0:8000</code></li>
+</ul>
+</li>
 </ul>
 <h1 id="issues">Issues</h1>
 <p>If something isn&rsquo;t working the way you expected, please take a look at <a href="https://github.com/cartologic/cartoview/issues">previous issues</a> that resolve common problems first.</p>
@@ -295,7 +304,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <h1 id="for-developers">For Developers</h1>
 <ul>
 <li>
-<p><strong>Cartoview Provides a <a href="../www.cartoview.org">GeoApp Market</a> for GIS Developers.</strong></p>
+<p><strong>Cartoview Provides a <a href="http://www.cartoview.org">GeoApp Market</a> for GIS Developers.</strong></p>
 </li>
 <li>
 <p><strong>Develope your own App</strong></p>
@@ -326,7 +335,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <p><img alt="App Panel" src="../img/apps_panel.PNG" /></p>
 </li>
 <li>
-<p>Now Zip your App and Upload it to <a href="../www.cartoview.org">GeoApp Market</a></p>
+<p>Now Zip your App and Upload it to <a href="http://www.cartoview.org">GeoApp Market</a></p>
 </li>
 </ul>
 </li>
