@@ -248,8 +248,21 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 </li>
 <li>
+<p><strong>(Optional)</strong> if want to override any settings variable rename <code>local_settings.py.sample</code> to <code>local_settings.py</code> then override settings you want inside <code>local_settings.py</code></p>
+</li>
+<li>
 <p><strong>Note:</strong> Don&rsquo;t Forget to Change <code>&lt;your_project_name&gt;</code> to desired name.</p>
 </li>
+<li>
+<p>to Install apps from <a href="http://www.cartoview.org">Geo App Market</a> run this command </p>
+<ul>
+<li><code>$ python manage.pt loaddata app_stores.json</code></li>
+</ul>
+</li>
+<li>
+<p>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a> </p>
+</li>
+<li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
 </li>
 </ul>
@@ -317,11 +330,11 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 <li>
 <p>Create a new empty app from cartoview app template as follow in your cartoview project directory</p>
-<p><code>$python manage.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip simple_app apps/</code></p>
+<p><code>$python manage.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip &lt;app_name&gt; apps/</code></p>
 </li>
 <li>
 <p>Edit cartoview_project/apps/apps.yml and add entry for your app</p>
-<pre><code>- name: app_name
+<pre><code>- name: &lt;app_name&gt;
   active: true
   order: 0
 </code></pre>
@@ -331,11 +344,31 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <p><img alt="New App" src="../img/developers_app.png" /></p>
 </li>
 <li>
+<p><strong>Don&rsquo;t forget to check Single instace option if u want to test it for the first time</strong>
+    <img alt="Single Instance" src="../img/single_instance.PNG" /></p>
+</li>
+<li>
 <p>Now on Cartoview in Apps tab your app will Appear Some thing like this</p>
 <p><img alt="App Panel" src="../img/apps_panel.PNG" /></p>
 </li>
 <li>
+<p>Click Explore Button will open App home page</p>
+<p><img alt="App Home" src="../img/app_home.PNG" /></p>
+</li>
+<li>
+<p>Make Changes to your App </p>
+</li>
+<li>
 <p>Now Zip your App and Upload it to <a href="http://www.cartoview.org">GeoApp Market</a></p>
+</li>
+<li>
+<p>Login on <a href="http://www.cartoview.org">GeoApp Market</a> and click <code>MYAPPS</code> tab</p>
+</li>
+<li>
+<p>Click <code>Submit New App</code> Button and Fill Required Info</p>
+</li>
+<li>
+<p>Now Users can install your app</p>
 </li>
 </ul>
 </li>
