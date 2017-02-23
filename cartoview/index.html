@@ -1,153 +1,442 @@
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="author" content="Cartologic">
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="GIS Web Mapping Applications.Cartoview enables the rapid deployment of easy-to-manage and easy-to-use spatial web applications">
+      
+      
         <link rel="canonical" href="http://www.cartologic.com/cartoview/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-
-	<title>Cartoview - Cartologic</title>
-
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../css/base.css" rel="stylesheet">
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
+      
+      
+        <meta name="author" content="Cartologic">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.0.5">
+    
+    
+      
+        <title>Cartoview - Cartologic</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-9c62e3c932.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+    
+    
+      
         
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <!-- Main title -->
-            <a class="navbar-brand" href="..">Cartologic</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-            <!-- Main navigation -->
-            <ul class="nav navbar-nav">
-
-                <li class="active">
-                    <a href="./">Cartoview</a>
-                </li>
-		<li >
-                    <a href="http://cartoview.org" target="_blank">Geo App Market</a>
-                </li>
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Cartologic" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
             
+              
             
-            </ul>
-
-            <!-- Search, Navigation and Repo links -->
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                <li >
-                    <a rel="next" href="..">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </li>
-                <li class="disabled">
-                    <a rel="prev" >
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://github.com/cartologic/cartoview">
-                        
-                            <i class="fa fa-github"></i>
-                        
-                        GitHub
-                    </a>
-                </li>
-                
-            </ul>
-        </div>
+            Cartoview
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
     </div>
+  </div>
 </div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
 
-        <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
+
+  
+
+
+  <a href="https://github.com/cartologic/cartoview" title="Go to repository" class="md-source" data-md-source="github">
     
-        <li class="main active"><a href="#about-cartoview">About Cartoview</a></li>
-        
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
     
-        <li class="main "><a href="#key-features">Key Features</a></li>
-        
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
     
-        <li class="main "><a href="#demos">Demos</a></li>
-        
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    Cartologic
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/cartologic/cartoview" title="Go to repository" class="md-source" data-md-source="github">
     
-        <li class="main "><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
-        
-            <li><a href="#installation-requirements">Installation Requirements</a></li>
-        
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
     
-        <li class="main "><a href="#install-on-ubuntu-linux">Install On Ubuntu linux</a></li>
-        
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
-        <li class="main "><a href="#install-on-windows">Install On Windows</a></li>
-        
+      
+      
+  <li class="md-nav__item">
     
-        <li class="main "><a href="#existing-geonode-users">Existing GeoNode Users</a></li>
-        
+      <a href=".." title="Welcome" class="md-nav__link">
+        Welcome
+      </a>
     
-        <li class="main "><a href="#docker">Docker</a></li>
-        
+  </li>
+
     
-        <li class="main "><a href="#issues">Issues</a></li>
-        
+      
+      
+  <li class="md-nav__item">
     
-        <li class="main "><a href="#for-developers">For Developers</a></li>
-        
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
-        <li class="main "><a href="#contributing-to-cartoview">Contributing to CartoView</a></li>
-        
+      
     
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Cartoview
+      </label>
+    
+    <a href="./" title="Cartoview" class="md-nav__link md-nav__link--active">
+      Cartoview
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-cartoview" title="About Cartoview" class="md-nav__link">
+    About Cartoview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" title="Key Features" class="md-nav__link">
+    Key Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demos" title="Demos" class="md-nav__link">
+    Demos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" title="Frequently Asked Questions" class="md-nav__link">
+    Frequently Asked Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-requirements" title="Installation Requirements" class="md-nav__link">
+    Installation Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-ubuntu-linux" title="Install On Ubuntu linux" class="md-nav__link">
+    Install On Ubuntu linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-windows" title="Install On Windows" class="md-nav__link">
+    Install On Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#existing-geonode-users" title="Existing GeoNode Users" class="md-nav__link">
+    Existing GeoNode Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues" title="Issues" class="md-nav__link">
+    Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-developers" title="For Developers" class="md-nav__link">
+    For Developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-cartoview" title="Contributing to CartoView" class="md-nav__link">
+    Contributing to CartoView
+  </a>
+  
+</li>
+      
     </ul>
-</div></div>
-            <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="about-cartoview">About Cartoview</h1>
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-cartoview" title="About Cartoview" class="md-nav__link">
+    About Cartoview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" title="Key Features" class="md-nav__link">
+    Key Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demos" title="Demos" class="md-nav__link">
+    Demos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" title="Frequently Asked Questions" class="md-nav__link">
+    Frequently Asked Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-requirements" title="Installation Requirements" class="md-nav__link">
+    Installation Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-ubuntu-linux" title="Install On Ubuntu linux" class="md-nav__link">
+    Install On Ubuntu linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-windows" title="Install On Windows" class="md-nav__link">
+    Install On Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#existing-geonode-users" title="Existing GeoNode Users" class="md-nav__link">
+    Existing GeoNode Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues" title="Issues" class="md-nav__link">
+    Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-developers" title="For Developers" class="md-nav__link">
+    For Developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-cartoview" title="Contributing to CartoView" class="md-nav__link">
+    Contributing to CartoView
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/cartologic/cartoview/edit/master/docs/cartoview.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
+<h2 id="about-cartoview">About Cartoview<a class="headerlink" href="#about-cartoview" title="Permanent link">&para;</a></h2>
 <p>Cartoview extends the popular GeoNode SDI to provide the ability to create, share, and visualize GIS Web Mapping Applications very easily and very quickly from the browser without programming.</p>
 <p>Cartoview enables communities of users to share geospatial applications, to collaborate on these applications, and to exchange the underlying data as Open Geospatial Consortium (OGC) compliant web services</p>
 <p>Cartoview has been built utilizing open source software and open standards to make it available for all GIS operators and to maximize interoperability.</p>
-<h1 id="key-features">Key Features</h1>
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <p><a href="http://www.cartoview.org">App Market</a> for GIS Web Application
 Once you install GeoNode and CartoView you will be be able to install GIS applications directly from the browser</p>
 <p>CartoView levereages the data management and security infrastructures of <a href="https://github.com/GeoNode/geonode">GeoNode</a> to deploy and serve GIS applications</p>
 <p>Developers create applications and deploy them on the <a href="http://www.cartoview.org">App Market</a></p>
 <p>Once the app is deployed it will become available to all Cartoview deployments</p>
-<h1 id="demos">Demos</h1>
+<h2 id="demos">Demos<a class="headerlink" href="#demos" title="Permanent link">&para;</a></h2>
 <p>You can take cartoview for a test <a href="http://demo.cartoview.org">here</a></p>
 <p>Create your account, load some test data and start authoring web mapping applicaitons</p>
-<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><h3>What exactly is CartoView? Is it a replacement for GeoNode?</h3></p>
@@ -204,204 +493,305 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 </li>
 </ul>
-<h2 id="installation-requirements">Installation Requirements</h2>
+<h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.python.org/">Python2</a></li>
-<li><a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></li>
+<li>Install <a href="https://www.python.org/">Python2.7</a></li>
+<li>Install <a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></li>
 </ul>
-<h1 id="install-on-ubuntu-linux">Install On Ubuntu linux</h1>
+<h2 id="install-on-ubuntu-linux">Install On Ubuntu linux<a class="headerlink" href="#install-on-ubuntu-linux" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Follow these setps if you don&rsquo;t have Geonode  installed on your ubuntu system.<br/></p>
+<p>Follow these setps if you don't have Geonode  installed on your ubuntu system.<br/></p>
 </li>
 <li>
 <p>These instructions will install <a href="https://github.com/GeoNode/geonode">Geonode</a> and Cartoview.</p>
 </li>
-<li>
-<p><strong>note :</strong> Verify your installation is completed by adding any layer in <a href="https://github.com/GeoNode/geonode">Geonode</a></p>
-</li>
-<li>
-<p><strong>Requirements:</strong></p>
-<ul>
-<li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
 </ul>
-</li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verify your installation is completed by adding any layer in <a href="https://github.com/GeoNode/geonode">Geonode</a></p>
+</div>
+<ul>
 <li>
 <p>Install <a href="https://github.com/GeoNode/geonode">Geonode=2.5.15</a> </p>
 </li>
 <li>
 <p>Install CartoView Libraries</p>
-<p><code>$ pip install cartoview</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cartoview</span>
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Install CartoView_Django Project</p>
-<pre><code>$django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Go to your Project Folder </p>
-<pre><code>$cd &lt;your_project_name&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Detect changes in <code>app_manager</code> App</p>
-<pre><code>$python manage.py makemigrations app_manager
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py makemigrations app_manager
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>create people Table</p>
-<pre><code>$python manage.py migrate people```
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Create Rest of tables :</p>
-<pre><code>$python manage.py migrate
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>load default User</p>
-<pre><code>$python manage.py loaddata sample_admin.json
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata sample_admin.json
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>load default oauth app</p>
-<pre><code>$python manage.py loaddata json/default_oauth_apps.json
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata json/default_oauth_apps.json
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Test Server (Development)</p>
 <ul>
-<li>To start Development Server run this Command :<pre><code>python manage.py runserver 0.0.0.0:8000
-</code></pre>
+<li>
+<p>To start Development Server run this Command :</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000 
+</pre></div>
+</td></tr></table>
+
 </li>
 </ul>
 </li>
-<li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Info</p>
 <p><strong>(Optional)</strong> if want to override any settings variable rename <code>local_settings.py.sample</code> to <code>local_settings.py</code> then override settings you want inside <code>local_settings.py</code></p>
-</li>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Don't Forget to Change <code>&lt;your_project_name&gt;</code> to desired name.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Apps From Geo App Market</p>
+<ul>
 <li>
-<p><strong>Note:</strong> Don&rsquo;t Forget to Change <code>&lt;your_project_name&gt;</code> to desired name.</p>
-</li>
-<li>
-<p>to Install apps from <a href="http://www.cartoview.org">Geo App Market</a> run this command </p>
+<p>to Install apps from <a href="http://www.cartoview.org">Geo App Market</a> </p>
 </li>
 <li>
 <p>Load Default Store</p>
-<pre><code>    $ python manage.py loaddata app_stores.json
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata app_stores.json
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a> </p>
 </li>
 <li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
-<h1 id="install-on-windows">Install On Windows</h1>
+</div>
+<h2 id="install-on-windows">Install On Windows<a class="headerlink" href="#install-on-windows" title="Permanent link">&para;</a></h2>
 <p><strong>We recommend to use Docker</strong></p>
 <ul>
-<li>Follow <a href="./#docker">Docker Instructions</a></li>
-</ul>
-<h1 id="existing-geonode-users">Existing GeoNode Users</h1>
-<p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
-<ul>
 <li>
-<p><strong>Requirements:</strong></p>
-<ul>
-<li><strong> GeoNode == 2.5.15 </strong></li>
-</ul>
+<p>Install <a href="http://gnuwin32.sourceforge.net/install.html">Make</a></p>
 </li>
 <li>
+<p>Follow <a href="./#docker">Docker Instructions</a></p>
+</li>
+</ul>
+<h2 id="existing-geonode-users">Existing GeoNode Users<a class="headerlink" href="#existing-geonode-users" title="Permanent link">&para;</a></h2>
+<p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
+<ul>
+<li>Requirements:<ul>
+<li>GeoNode == 2.5.15</li>
+</ul>
+</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We will Support more version of Geonode Soon!!</p>
+</div>
+<ul>
+<li>
 <p>install cartoview libraries</p>
-<p><code>$ pip install cartoview == &lt;version&gt;</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">cartoview</span> <span class="o">==</span> &lt;version&gt;
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Create Cartoview Project</p>
-<pre><code>    $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Go to your Project Folder </p>
-<p><code>$ cd &lt;your_project_name&gt;</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>detect Changes in app_manager</p>
-<p><code>$python manage.py makemigrations app_manager</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py makemigrations app_manager
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
-<p><code>$python manage.py migrate</code></p>
+<p>create People table </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
+</pre></div>
+</td></tr></table>
+
 </li>
-<li>
-<p><code>$python manage.py collectstatic --noinput</code></p>
-</li>
-<li>
-<p>Now Development Server :</p>
+</ul>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>this command will fire an error ignore it</p>
+</div>
 <ul>
-<li><code>$python manage.py runserver 0.0.0.0:8000</code></li>
-</ul>
+<li>
+<p>create rest of database tables 
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
+</pre></div>
+</td></tr></table></p>
+</li>
+<li>
+<p>Collect static Files </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Now Development Server :
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000
+</pre></div>
+</td></tr></table></p>
 </li>
 </ul>
-<h1 id="docker">Docker</h1>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
 <ul>
 <li>be sure you installed all <a href="./#installation-requirements">requirements</a></li>
 <li>Install <a href="https://www.docker.com/products/docker">Docker</a></li>
 <li>
-<p>Create Cartoview Project using this command:</p>
-<pre><code>    $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
-</code></pre>
+<p>Create Cartoview Project which contains required files to run and configure Docker using this command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
 <p>Replace <code>&lt;your_project_name&gt;</code> with desired name here i will use <code>cartoview_project</code></p>
 </li>
 <li>
-<p>Go to your project Folder </p>
-<ul>
-<li><code>cd &lt;your_project_name&gt;</code></li>
-</ul>
+<p>Go to your project Folder 
+     <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table></p>
 </li>
-<li>
-<p>If you want to run this project on localhost only change two variables(project,module) in <code>uwsgi.ini</code> file :</p>
-<pre><code>    project = &lt;your_project_name&gt;
-    .....
-    module= &lt;your_project_name&gt;.wsgi:application
-</code></pre>
-</li>
-<li>
-<p>If you want to run this project with a domain :</p>
-<ol>
+<li>If you want to run this project on localhost only change two variables(project,module) in <code>uwsgi.ini</code>(this is the server file) file in your Project Folder :
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>project = &lt;your_project_name&gt;
+.....
+module= &lt;your_project_name&gt;.wsgi:application
+</pre></div>
+</td></tr></table></li>
+<li>If you want to run this project with a domain :<ol>
 <li>repeat previous step</li>
-<li>change <code>django.env</code> file to be some thing like this :<pre><code>DATABASE_URL=postgres://cartologic:root@postgis:5432/cartoview
-GEOSERVER_PUBLIC_LOCATION=http://&lt;your_domain_or_ip&gt;/geoserver/
-GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
-SITEURL=http://&lt;your_domain_or_ip&gt;
-ALLOWED_HOSTS=['*']
-</code></pre>
-</li>
+<li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like blew (default database username: <code>cartologic</code> and password:<code>root</code>) :
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">cartoview</span>
+<span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;</span>
+<span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></li>
 </ol>
 </li>
-<li>
-<p>Start Docker images type :</p>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>default database user in <code>postgis.env</code> file in your project if want to change it. </p>
+</div>
 <ul>
-<li><code>make up</code></li>
-</ul>
+<li>
+<p>Start Docker images(cartoview,geoserver,postgres) type :</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make up
+</pre></div>
+</td></tr></table>
+
 </li>
-<li>detect changes in <code>app_manager</code> App:<ul>
-<li><code>make prepare_manager</code></li>
-</ul>
+<li>
+<p>detect changes in <code>app_manager</code> App:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make prepare_manager
+</pre></div>
+</td></tr></table>
+
 </li>
-<li>create  people table : <ul>
-<li><code>make migrate_people</code></li>
-</ul>
+<li>
+<p>create  people table : </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make migrate_people
+</pre></div>
+</td></tr></table>
+
 </li>
-<li>create rest of  tabels : <ul>
-<li><code>make sync</code> </li>
 </ul>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>this command will fire an error ignore it</p>
+</div>
+<ul>
+<li>
+<p>create rest of  tabels : </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make sync
+</pre></div>
+</td></tr></table>
+
 </li>
-<li>Now you can Access cartoview on <code>http://localhost</code> or ```http://<your_domain_or_ip></li>
-<li>Final step Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></li>
 </ul>
-<h1 id="issues">Issues</h1>
-<p>If something isn&rsquo;t working the way you expected, please take a look at <a href="https://github.com/cartologic/cartoview/issues">previous issues</a> that resolve common problems first.</p>
-<p>Have you found a new bug? Want to request a new feature? We&rsquo;d love to hear from you. Please let us know by submitting an issue.</p>
-<h1 id="for-developers">For Developers</h1>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Now you can Access cartoview on <code>http://localhost</code> or <code>http://&lt;your_domain_or_ip&gt;</code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Final step Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></p>
+</div>
+<h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
+<p>If something isn't working the way you expected, please take a look at <a href="https://github.com/cartologic/cartoview/issues">previous issues</a> that resolve common problems first.</p>
+<p>Have you found a new bug? Want to request a new feature? We'd love to hear from you. Please let us know by submitting an issue.</p>
+<h2 id="for-developers">For Developers<a class="headerlink" href="#for-developers" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>Cartoview Provides a <a href="http://www.cartoview.org">GeoApp Market</a> for GIS Developers.</strong></p>
@@ -410,30 +800,28 @@ ALLOWED_HOSTS=['*']
 <p><strong>Develope your own App</strong></p>
 <ul>
 <li>
-<p><strong>Requirements:</strong></p>
-<ul>
-<li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
-</ul>
+<p>Create a new empty app from cartoview app template as follow in your cartoview project directory
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table></p>
 </li>
 <li>
-<p>Create a new empty app from cartoview app template as follow in your cartoview project directory</p>
-<pre><code>- $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
-</code></pre>
-</li>
-<li>
-<p>Edit cartoview_project/apps/apps.yml and add entry for your app</p>
-<pre><code>- name: &lt;app_name&gt;
+<p>Edit cartoview_project/apps/apps.yml and add entry for your app
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>- name: &lt;app_name&gt;
   active: true
   order: 0
-</code></pre>
+</pre></div>
+</td></tr></table></p>
 </li>
 <li>
 <p>Add the App to the database form django admin interface</p>
 <p><img alt="New App" src="../img/developers_app.png" /></p>
 </li>
 <li>
-<p><strong>Don&rsquo;t forget to check Single instace option if u want to test it for the first time</strong>
-    <img alt="Single Instance" src="../img/single_instance.PNG" /></p>
+<p><strong>Don't forget to check Single instace option if u want to test it for the first time</strong></p>
+<p><img alt="Single Instance" src="../img/single_instance.PNG" /></p>
 </li>
 <li>
 <p>Now on Cartoview in Apps tab your app will Appear Some thing like this</p>
@@ -461,8 +849,8 @@ ALLOWED_HOSTS=['*']
 </ul>
 </li>
 </ul>
-<h1 id="contributing-to-cartoview">Contributing to CartoView</h1>
-<p>Please refer to each project&rsquo;s style guidelines and guidelines for submitting patches and additions. In general, we follow the &ldquo;fork-and-pull&rdquo; Git workflow.</p>
+<h2 id="contributing-to-cartoview">Contributing to CartoView<a class="headerlink" href="#contributing-to-cartoview" title="Permanent link">&para;</a></h2>
+<p>Please refer to each project's style guidelines and guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.</p>
 <ul>
 <li>Fork the repo on GitHub</li>
 <li>Clone the project to your own machine</li>
@@ -470,47 +858,69 @@ ALLOWED_HOSTS=['*']
 <li>Push your work back up to your fork</li>
 <li>Submit a Pull request so that we can review your changes</li>
 </ul>
-<p><strong>NOTE: Be sure to merge the latest from &ldquo;upstream&rdquo; before making a pull request!</strong></p></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure to merge the latest from "upstream" before making a pull request!</p>
+</div>
+              
+            </article>
+          </div>
         </div>
-
-        <footer class="col-md-12">
-            <hr>
-            
-                <center>Cartologic</center>
-            
-            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
-        </footer>
-
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
-        <script>var base_url = '..';</script>
-        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-        <script src="../js/base.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            From here you can search these documents. Enter
-                            your search terms below.
-                        </p>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                            </div>
-                        </form>
-                        <div id="mkdocs-search-results"></div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Welcome" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-        </div>
-    </body>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Welcome
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Cartologic
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-f7ac33b6fb.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
 </html>
