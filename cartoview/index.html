@@ -505,13 +505,11 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 <li>
 <p>These instructions will install <a href="https://github.com/GeoNode/geonode">Geonode</a> and Cartoview.</p>
-</li>
-</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Verify your installation is completed by adding any layer in <a href="https://github.com/GeoNode/geonode">Geonode</a></p>
 </div>
-<ul>
+</li>
 <li>
 <p>Install <a href="https://github.com/GeoNode/geonode">Geonode=2.5.15</a> </p>
 </li>
@@ -624,16 +622,16 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <h2 id="existing-geonode-users">Existing GeoNode Users<a class="headerlink" href="#existing-geonode-users" title="Permanent link">&para;</a></h2>
 <p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
 <ul>
-<li>Requirements:<ul>
+<li>
+<p>Requirements:</p>
+<ul>
 <li>GeoNode == 2.5.15</li>
-</ul>
-</li>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>We will Support more version of Geonode Soon!!</p>
 </div>
-<ul>
+</li>
 <li>
 <p>install cartoview libraries</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">cartoview</span> <span class="o">==</span> &lt;version&gt;
@@ -668,13 +666,11 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </pre></div>
 </td></tr></table>
 
-</li>
-</ul>
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
 <p>this command will fire an error ignore it</p>
 </div>
-<ul>
+</li>
 <li>
 <p>create rest of database tables 
     <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
@@ -723,9 +719,16 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 module= &lt;your_project_name&gt;.wsgi:application
 </pre></div>
 </td></tr></table></li>
-<li>If you want to run this project with a domain :<ol>
+<li>
+<p>If you want to run this project with a domain :</p>
+<ol>
 <li>repeat previous step</li>
-<li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like blew (default database username: <code>cartologic</code> and password:<code>root</code>) :
+<li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>default database username: <code>cartologic</code> and password:<code>root</code></p>
+</div>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -736,15 +739,13 @@ module= &lt;your_project_name&gt;.wsgi:application
 <span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;</span>
 <span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
 </pre></div>
-</td></tr></table></li>
-</ol>
-</li>
-</ul>
+</td></tr></table>
+
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>default database user in <code>postgis.env</code> file in your project if want to change it. </p>
 </div>
-<ul>
+</li>
 <li>
 <p>Start Docker images(cartoview,geoserver,postgres) type :</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make up
@@ -765,21 +766,17 @@ module= &lt;your_project_name&gt;.wsgi:application
 </pre></div>
 </td></tr></table>
 
-</li>
-</ul>
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
 <p>this command will fire an error ignore it</p>
 </div>
-<ul>
+</li>
 <li>
 <p>create rest of  tabels : </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make sync
 </pre></div>
 </td></tr></table>
 
-</li>
-</ul>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <p>Now you can Access cartoview on <code>http://localhost</code> or <code>http://&lt;your_domain_or_ip&gt;</code></p>
@@ -788,6 +785,8 @@ module= &lt;your_project_name&gt;.wsgi:application
 <p class="admonition-title">Important</p>
 <p>Final step Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></p>
 </div>
+</li>
+</ul>
 <h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
 <p>If something isn't working the way you expected, please take a look at <a href="https://github.com/cartologic/cartoview/issues">previous issues</a> that resolve common problems first.</p>
 <p>Have you found a new bug? Want to request a new feature? We'd love to hear from you. Please let us know by submitting an issue.</p>
