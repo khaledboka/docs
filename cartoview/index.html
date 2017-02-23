@@ -27,7 +27,7 @@
 
     <body>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
         <!-- Collapsed navigation -->
@@ -48,6 +48,7 @@
         <div class="navbar-collapse collapse">
             <!-- Main navigation -->
             <ul class="nav navbar-nav">
+
                 <li class="active">
                     <a href="./">Cartoview</a>
                 </li>
@@ -104,6 +105,8 @@
         
     
         <li class="main "><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+        
+            <li><a href="#installation-requirements">Installation Requirements</a></li>
         
     
         <li class="main "><a href="#install-on-ubuntu-linux">Install On Ubuntu linux</a></li>
@@ -201,6 +204,11 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 </li>
 </ul>
+<h2 id="installation-requirements">Installation Requirements</h2>
+<ul>
+<li><a href="https://www.python.org/">Python2</a></li>
+<li><a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></li>
+</ul>
 <h1 id="install-on-ubuntu-linux">Install On Ubuntu linux</h1>
 <ul>
 <li>
@@ -227,37 +235,44 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 <li>
 <p>Install CartoView_Django Project</p>
-<ul>
-<li>
-<p><code>$django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip  &lt;your_project_name&gt;</code></p>
+<pre><code>$django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+</code></pre>
 </li>
 <li>
-<p><code>$cd &lt;your_project_name&gt;</code></p>
+<p>Go to your Project Folder </p>
+<pre><code>$cd &lt;your_project_name&gt;
+</code></pre>
 </li>
 <li>
-<p><code>$bower install</code></p>
+<p>Detect changes in <code>app_manager</code> App</p>
+<pre><code>$python manage.py makemigrations app_manager
+</code></pre>
 </li>
 <li>
-<p><code>$python manage.py makemigrations app_manager</code></p>
+<p>create people Table</p>
+<pre><code>$python manage.py migrate people```
+</code></pre>
 </li>
 <li>
-<p><code>$python manage.py migrate people</code></p>
+<p>Create Rest of tables :</p>
+<pre><code>$python manage.py migrate
+</code></pre>
 </li>
 <li>
-<p><code>$python manage.py migrate</code></p>
+<p>load default User</p>
+<pre><code>$python manage.py loaddata sample_admin.json
+</code></pre>
 </li>
 <li>
-<p><code>$python manage.py loaddata sample_admin.json</code></p>
-</li>
-<li>
-<p><code>$python manage.py loaddata json/default_oauth_apps.json</code></p>
+<p>load default oauth app</p>
+<pre><code>$python manage.py loaddata json/default_oauth_apps.json
+</code></pre>
 </li>
 <li>
 <p>Test Server (Development)</p>
 <ul>
-<li>
-<p>To start Development Server run this Command :</p>
-<p><code>python manage.py runserver 0.0.0.0:8000</code></p>
+<li>To start Development Server run this Command :<pre><code>python manage.py runserver 0.0.0.0:8000
+</code></pre>
 </li>
 </ul>
 </li>
@@ -269,23 +284,21 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 <li>
 <p>to Install apps from <a href="http://www.cartoview.org">Geo App Market</a> run this command </p>
-<ul>
-<li><code>$ python manage.py loaddata app_stores.json</code></li>
-</ul>
+</li>
+<li>
+<p>Load Default Store</p>
+<pre><code>    $ python manage.py loaddata app_stores.json
+</code></pre>
 </li>
 <li>
 <p>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a> </p>
 </li>
 <li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
-</li>
-</ul>
 <h1 id="install-on-windows">Install On Windows</h1>
 <p><strong>We recommend to use Docker</strong></p>
 <ul>
-<li>Install Docker or Docker toolbox</li>
-<li>Run docker container to install geonode</li>
-<li>Continue as above</li>
+<li>Follow <a href="./#docker">Docker Instructions</a></li>
 </ul>
 <h1 id="existing-geonode-users">Existing GeoNode Users</h1>
 <p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
@@ -293,23 +306,24 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <li>
 <p><strong>Requirements:</strong></p>
 <ul>
-<li><strong>1.8.7 &lt;= Django &lt;1.9a0</strong></li>
 <li><strong> GeoNode == 2.5.15 </strong></li>
 </ul>
 </li>
 <li>
+<p>install cartoview libraries</p>
 <p><code>$ pip install cartoview == &lt;version&gt;</code></p>
 </li>
 <li>
-<p><code>$ django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip  &lt;your_project_name&gt;</code></p>
+<p>Create Cartoview Project</p>
+<pre><code>    $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+</code></pre>
 </li>
 <li>
+<p>Go to your Project Folder </p>
 <p><code>$ cd &lt;your_project_name&gt;</code></p>
 </li>
 <li>
-<p><code>$ bower install</code></p>
-</li>
-<li>
+<p>detect Changes in app_manager</p>
 <p><code>$python manage.py makemigrations app_manager</code></p>
 </li>
 <li>
@@ -326,7 +340,64 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 </ul>
 <h1 id="docker">Docker</h1>
-<p>This part of documentation is not available yet.</p>
+<ul>
+<li>be sure you installed all <a href="./#installation-requirements">requirements</a></li>
+<li>Install <a href="https://www.docker.com/products/docker">Docker</a></li>
+<li>
+<p>Create Cartoview Project using this command:</p>
+<pre><code>    $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+</code></pre>
+</li>
+<li>
+<p>Replace <code>&lt;your_project_name&gt;</code> with desired name here i will use <code>cartoview_project</code></p>
+</li>
+<li>
+<p>Go to your project Folder </p>
+<ul>
+<li><code>cd &lt;your_project_name&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>If you want to run this project on localhost only change two variables(project,module) in <code>uwsgi.ini</code> file :</p>
+<pre><code>    project = &lt;your_project_name&gt;
+    .....
+    module= &lt;your_project_name&gt;.wsgi:application
+</code></pre>
+</li>
+<li>
+<p>If you want to run this project with a domain :</p>
+<ol>
+<li>repeat previous step</li>
+<li>change <code>django.env</code> file to be some thing like this :<pre><code>DATABASE_URL=postgres://cartologic:root@postgis:5432/cartoview
+GEOSERVER_PUBLIC_LOCATION=http://&lt;your_domain_or_ip&gt;/geoserver/
+GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+SITEURL=http://&lt;your_domain_or_ip&gt;
+ALLOWED_HOSTS=['*']
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Start Docker images type :</p>
+<ul>
+<li><code>make up</code></li>
+</ul>
+</li>
+<li>detect changes in <code>app_manager</code> App:<ul>
+<li><code>make prepare_manager</code></li>
+</ul>
+</li>
+<li>create  people table : <ul>
+<li><code>make migrate_people</code></li>
+</ul>
+</li>
+<li>create rest of  tabels : <ul>
+<li><code>make sync</code> </li>
+</ul>
+</li>
+<li>Now you can Access cartoview on <code>http://localhost</code> or ```http://<your_domain_or_ip></li>
+<li>Final step Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></li>
+</ul>
 <h1 id="issues">Issues</h1>
 <p>If something isn&rsquo;t working the way you expected, please take a look at <a href="https://github.com/cartologic/cartoview/issues">previous issues</a> that resolve common problems first.</p>
 <p>Have you found a new bug? Want to request a new feature? We&rsquo;d love to hear from you. Please let us know by submitting an issue.</p>
@@ -346,7 +417,8 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 <li>
 <p>Create a new empty app from cartoview app template as follow in your cartoview project directory</p>
-<p><code>$python manage.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip &lt;app_name&gt; apps/</code></p>
+<pre><code>- $django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+</code></pre>
 </li>
 <li>
 <p>Edit cartoview_project/apps/apps.yml and add entry for your app</p>
