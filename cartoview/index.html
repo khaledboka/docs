@@ -464,7 +464,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <li>Sharing GIS Apps</li>
 <li>Provide apps for common tasks like visualizing and querying feature services.</li>
 <li>Extend the functions of the GeoNode SDI beyond data management</li>
-<li>Provide a solid core of utilities that can be used to help developers integrate and deploy their Geo apps </li>
+<li>Provide a solid core of utilities that can be used to help developers integrate and deploy their Geo apps</li>
 <li>Foster an ecosystem of apps extending easily deplyable and installable</li>
 </ul>
 </li>
@@ -497,7 +497,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <ul>
 <li><a href="http://cartoview.org/app/cartoview_map_viewer/">Simple Map Viewer</a> : This app allows the creation of html mobile ready viewer app with most basic features.</li>
 <li><a href="http://cartoview.org/app/cartoview_feature_list/">Feature Detailed Viewer</a> : A map and list applications for store locations or similar usage</li>
-<li><a href="http://cartoview.org/app/cartoview_geonode_viewer/">WebApp Builder</a> : A customizable GIS </li>
+<li><a href="http://cartoview.org/app/cartoview_geonode_viewer/">WebApp Builder</a> : A customizable GIS</li>
 </ul>
 </li>
 <li>
@@ -510,7 +510,15 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Install <a href="https://www.python.org/">Python2.7</a></li>
-<li>Install <a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></li>
+<li>
+<p>Install <a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></p>
+<div class="admonition attention">
+<p class="admonition-title">Docker users</p>
+<ul>
+<li>you need to install <a href="https://docs.docker.com/compose/install/">docker-compose</a></li>
+</ul>
+</div>
+</li>
 </ul>
 <h2 id="install-on-ubuntu-linux">Install On Ubuntu linux<a class="headerlink" href="#install-on-ubuntu-linux" title="Permanent link">&para;</a></h2>
 <ul>
@@ -525,7 +533,10 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </div>
 </li>
 <li>
-<p>Install <a href="https://github.com/GeoNode/geonode">Geonode=2.5.15</a> </p>
+<p>Don't Forget <a href="./#installation-requirements">Installation requirements</a></p>
+</li>
+<li>
+<p>Install <a href="https://github.com/GeoNode/geonode">Geonode=2.5.15</a></p>
 </li>
 <li>
 <p>Install CartoView Libraries</p>
@@ -535,21 +546,14 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 
 </li>
 <li>
-<p>Install geonode client</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">django</span><span class="o">-</span><span class="n">geonode</span><span class="o">-</span><span class="n">client</span>
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
 <p>Install CartoView_Django Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Go to your Project Folder </p>
+<p>Go to your Project Folder</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
 </pre></div>
 </td></tr></table>
@@ -595,7 +599,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <ul>
 <li>
 <p>To start Development Server run this Command :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000
 </pre></div>
 </td></tr></table>
 
@@ -615,7 +619,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <p class="admonition-title">Apps From Geo App Market</p>
 <ul>
 <li>
-<p>to Install apps from <a href="http://www.cartoview.org">Geo App Market</a> </p>
+<p>to Install apps from <a href="http://www.cartoview.org">Geo App Market</a></p>
 </li>
 <li>
 <p>Load Default Store</p>
@@ -625,8 +629,17 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 
 </li>
 <li>
-<p>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a> </p>
+<p>Install <a href="https://nodejs.org/en/">nodejs</a> and then install <a href="https://bower.io/">bower</a> we need them to install app_manager dependencies</p>
 </li>
+<li>in this step we will install required files in your project folder type :
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bower install 
+</pre></div>
+</td></tr></table></li>
+<li>Collect installed fieles type:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
+</pre></div>
+</td></tr></table></li>
+<li>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a></li>
 <li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
 </div>
@@ -662,13 +675,13 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </li>
 <li>
 <p>Create Cartoview Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip &lt;your_project_name&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Go to your Project Folder </p>
+<p>Go to your Project Folder</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
 </pre></div>
 </td></tr></table>
@@ -682,7 +695,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 
 </li>
 <li>
-<p>create People table </p>
+<p>create People table</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
 </pre></div>
 </td></tr></table>
@@ -693,13 +706,13 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </div>
 </li>
 <li>
-<p>create rest of database tables 
+<p>create rest of database tables
     <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
 </pre></div>
 </td></tr></table></p>
 </li>
 <li>
-<p>Collect static Files </p>
+<p>Collect static Files</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
 </pre></div>
 </td></tr></table>
@@ -712,40 +725,35 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </td></tr></table></p>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>in Production Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></p>
+</div>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
 <ul>
 <li>be sure you installed all <a href="./#installation-requirements">requirements</a></li>
 <li>Install <a href="https://www.docker.com/products/docker">Docker</a></li>
 <li>
 <p>Create Cartoview Project which contains required files to run and configure Docker using this command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">ddjango</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">--</span><span class="n">name</span> <span class="n">django</span><span class="o">.</span><span class="n">env</span><span class="p">,</span><span class="n">uwsgi</span><span class="o">.</span><span class="n">ini</span><span class="p">,</span><span class="o">.</span><span class="n">bowerrc</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Replace <code>&lt;your_project_name&gt;</code> with desired name here i will use <code>cartoview_project</code></p>
+<p>Replace <code>&lt;your_project_name&gt;</code> with the desired name </p>
 </li>
 <li>
-<p>Go to your project Folder 
+<p>Go to your project Folder
      <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
 </pre></div>
 </td></tr></table></p>
 </li>
-<li>If you want to run this project on localhost only change two variables(project,module) in <code>uwsgi.ini</code>(this is the server file) file in your Project Folder :
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>project = &lt;your_project_name&gt;
-.....
-module= &lt;your_project_name&gt;.wsgi:application
-</pre></div>
-</td></tr></table></li>
 <li>
 <p>If you want to run this project with a domain :</p>
-<ol>
-<li>repeat previous step</li>
+<ul>
 <li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:</li>
-</ol>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>default database username: <code>cartologic</code> and password:<code>root</code></p>
@@ -764,25 +772,18 @@ module= &lt;your_project_name&gt;.wsgi:application
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>default database user in <code>postgis.env</code> file in your project if want to change it. </p>
+<p>default database user in <code>postgis.env</code> file in your project if want to change it.</p>
 </div>
 </li>
 <li>
 <p>Start Docker images(cartoview,geoserver,postgres) type :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make up
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make run
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>detect changes in <code>app_manager</code> App:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make prepare_manager
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>create  people table : </p>
+<p>create  people table :</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make migrate_people
 </pre></div>
 </td></tr></table>
@@ -793,8 +794,8 @@ module= &lt;your_project_name&gt;.wsgi:application
 </div>
 </li>
 <li>
-<p>create rest of  tabels : </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make sync
+<p>create rest of  tabels and collect static files :</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make static_db
 </pre></div>
 </td></tr></table>
 
@@ -852,7 +853,7 @@ module= &lt;your_project_name&gt;.wsgi:application
 <p><img alt="App Home" src="../img/app_home.PNG" /></p>
 </li>
 <li>
-<p>Make Changes to your App </p>
+<p>Make Changes to your App</p>
 </li>
 <li>
 <p>Now Zip your App and Upload it to <a href="http://www.cartoview.org">GeoApp Market</a></p>
