@@ -509,7 +509,13 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 <h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Install <a href="https://www.python.org/">Python2.7</a></li>
+<li>Install <a href="https://www.python.org/">Python2.7</a><ul>
+<li>Make Sure to add the Python in the Path, as this is not setup by default</li>
+<li>check add python.exe to PATH
+    <img alt="python setup" src="../img/python.png" />
+    <img alt="python setup" src="../img/python2.png" /></li>
+</ul>
+</li>
 <li>
 <p>Install <a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></p>
 <div class="admonition attention">
@@ -644,14 +650,25 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 </div>
 <h2 id="install-on-windows">Install On Windows<a class="headerlink" href="#install-on-windows" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Install <a href="https://www.python.org/">Python2.7</a><ul>
+<li>Make Sure to add the Python in the Path, as this is not setup by default</li>
+<li>check add python.exe to PATH
+    <img alt="python setup" src="../img/python.png" />
+    <img alt="python setup" src="../img/python2.png" /></li>
+</ul>
+</li>
+<li>
+<p>Install Django 1.8.7 open cmd and type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">django</span><span class="o">==</span><span class="m">1</span>.8.7
+</pre></div>
+</td></tr></table>
+
+</li>
+</ul>
 <p><strong>We recommend to use Docker</strong></p>
 <ul>
-<li>
-<p>Install <a href="http://gnuwin32.sourceforge.net/install.html">Make</a></p>
-</li>
-<li>
-<p>Follow <a href="./#docker">Docker Instructions</a></p>
-</li>
+<li>Follow <a href="./#docker">Docker Instructions</a></li>
 </ul>
 <h2 id="existing-geonode-users">Existing GeoNode Users<a class="headerlink" href="#existing-geonode-users" title="Permanent link">&para;</a></h2>
 <p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
@@ -733,9 +750,10 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 <ul>
 <li>be sure you installed all <a href="./#installation-requirements">requirements</a></li>
 <li>Install <a href="https://www.docker.com/products/docker">Docker</a></li>
+<li>for windows users please use docker shell to execute the following commands</li>
 <li>
 <p>Create Cartoview Project which contains required files to run and configure Docker using this command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">ddjango</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">--</span><span class="n">name</span> <span class="n">django</span><span class="o">.</span><span class="n">env</span><span class="p">,</span><span class="n">uwsgi</span><span class="o">.</span><span class="n">ini</span><span class="p">,</span><span class="o">.</span><span class="n">bowerrc</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">--</span><span class="n">name</span> <span class="n">django</span><span class="o">.</span><span class="n">env</span><span class="p">,</span><span class="n">uwsgi</span><span class="o">.</span><span class="n">ini</span><span class="p">,</span><span class="o">.</span><span class="n">bowerrc</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
 </pre></div>
 </td></tr></table>
 
@@ -749,6 +767,7 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </pre></div>
 </td></tr></table></p>
 </li>
+<li>Open <code>docker-compose.yml</code> and Look at the port numbers for GeoServer and Postges and change the number before the <code>:</code> this will be the port on your machine</li>
 <li>
 <p>If you want to run this project with a domain :</p>
 <ul>
@@ -756,7 +775,10 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>default database username: <code>cartologic</code> and password:<code>root</code></p>
+<ul>
+<li>default database username: <code>cartologic</code> and password: <code>root</code></li>
+<li>default database user in <code>postgis.env</code> file in your project if want to change it.</li>
+</ul>
 </div>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -770,10 +792,6 @@ Once you install GeoNode and CartoView you will be be able to install GIS applic
 </pre></div>
 </td></tr></table>
 
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>default database user in <code>postgis.env</code> file in your project if want to change it.</p>
-</div>
 </li>
 <li>
 <p>Start Docker images(cartoview,geoserver,postgres) type :</p>
