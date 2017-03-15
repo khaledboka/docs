@@ -180,26 +180,15 @@
     
       
       
-  <li class="md-nav__item">
-    
-      <a href=".." title="Welcome" class="md-nav__link">
-        Welcome
-      </a>
-    
-  </li>
-
-    
-      
-      
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-1">
       Cartoview
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-1">
         Cartoview
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -209,7 +198,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../about/" title="About" class="md-nav__link">
+      <a href=".." title="About" class="md-nav__link">
         About
       </a>
     
@@ -300,6 +289,13 @@
         <li class="md-nav__item">
   <a href="#existing-geonode-users" title="Existing GeoNode Users" class="md-nav__link">
     Existing GeoNode Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-notes" title="Deployment notes" class="md-nav__link">
+    Deployment notes
   </a>
   
 </li>
@@ -415,6 +411,13 @@
         <li class="md-nav__item">
   <a href="#existing-geonode-users" title="Existing GeoNode Users" class="md-nav__link">
     Existing GeoNode Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-notes" title="Deployment notes" class="md-nav__link">
+    Deployment notes
   </a>
   
 </li>
@@ -666,10 +669,34 @@
 </td></tr></table></p>
 </li>
 </ul>
+<h2 id="deployment-notes">Deployment notes<a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>in Production Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></p>
+in Production Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></div>
+</li>
+<li>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Once CartoView is installed is expected to install all apps from the app store automatically
+At the moment CartoView will fully support apache server only
+For nginx deployments, CartoView will be able to detect new apps and get the updates, how ever to apply the updates, web server restart will be required to complete        the process
+CartoView will not be able to restart nginx when new apps are installed.
+After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future</p>
+<ul>
+<li>follow these steps to get apps working on nginx<ul>
+<li>collect static files using this commands
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
+</pre></div>
+</td></tr></table></li>
+<li>restart server now you should restart server after installing any app</li>
+</ul>
+</li>
+</ul>
 </div>
+</li>
+</ul>
               
             </article>
           </div>
