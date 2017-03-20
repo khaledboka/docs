@@ -123,7 +123,7 @@
 
 **We recommend to use Docker**
 
-- Follow [Docker Instructions](cartoview.md#docker)
+- Follow [Docker Instructions](docker.md#docker)
 
 
 ##Existing GeoNode Users

@@ -3,7 +3,11 @@
 ##Docker
 - be sure you installed all [requirements](installation.md#installation-requirements)
 - Install [Docker][11]
-- for windows users please use docker shell to execute the following commands
+- For Windows User install ```make``` by
+	- installing [MSYS2](http://www.msys2.org/)
+	- open msys shell and install ```make``` using this command ```pacman -S make```
+	- add ```<msys_path>\usr\bin``` to ```PATH``` envirnment variable
+- for windows users please use ```Docker Quickstart Terminal``` to execute the following commands
 - Create Cartoview Project which contains required files to run and configure Docker using this command:
 
 	``` python
@@ -13,17 +17,30 @@
 - Replace ```<your_project_name>``` with the desired name 
 
 - Go to your project Folder
+
 	 ``` python
 	 cd <your_project_name>
 	 ```
+
 - Open ```docker-compose.yml``` and Look at the port numbers for GeoServer and Postges and change the number before the ```:``` this will be the port on your machine
 - If you want to run this project with a domain :
 	- change ```django.env```(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:
+	
+	!!! tip
+		- any file with ```.env``` EXTENSION Is a file that contains environment variables passed to specific container for example ```django.env``` file contains environment variables passed to Cartoview container so django can read these variables and use them
+
 
 	!!! tip
 		- default database username: ```cartologic``` and password: ```root```
 		- default database user in ```postgis.env``` file in your project if want to change it.
-
+	
+	!!! warning
+		- For windows Users Please Comment volumes lines of postgis Container only in ```docker-compose.yml``` by preceding the line with ```#``` something like this:
+			```python
+				#   volumes:
+				#      - pgdata:/var/lib/postgresql
+			```
+		
 	``` python
 	DATABASE_URL=postgres://<database_user_name>:<database_password>@postgis:5432/cartoview
 	GEOSERVER_PUBLIC_LOCATION=http://<your_domain_or_ip>/geoserver/
@@ -31,7 +48,16 @@
 	SITEURL=http://<your_domain_or_ip>
 	ALLOWED_HOSTS=['*']
 	```
-		
+
+	!!! tip
+		- For windows users the default IP aasigned to docker is : ```192.168.99.100``` so the default django.env file must be some thing like this:
+		``` python
+		DATABASE_URL=postgres://<database_user_name>:<database_password>@postgis:5432/cartoview
+		GEOSERVER_PUBLIC_LOCATION=http://192.168.99.100/geoserver/
+		GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+		SITEURL=http://192.168.99.100
+		ALLOWED_HOSTS=['*']
+		```
 
 - Start Docker images(cartoview,geoserver,postgres) type :
 
@@ -74,7 +100,11 @@
 			``` sh
 			docker-compose restart cartoview
 			```
+## Windows Issues
+- Docker volumes have some issues  with windows so you have to backup your postgres database.
 
+## Linux Docker 
+- you will Find all postgres data in pgdata folder
 
 [1]: https://github.com/GeoNode/geonode
 [2]: http://www.cartoview.org
