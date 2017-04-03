@@ -54,6 +54,9 @@
 	python manage.py migrate people
 	```
 
+	!!! bug
+		this command will fire an error ignore it
+
 - Create Rest of tables :
 
 	``` sh

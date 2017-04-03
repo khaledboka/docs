@@ -8,7 +8,7 @@
 
 	- Create a new empty app from cartoview app template as follow in your cartoview project directory
 	``` python
-	django-admin.py startproject --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip <your_App_name>
+	django-admin.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip <your_App_name>
 	```
 
 	- Edit cartoview_project/apps/apps.yml and add entry for your app
