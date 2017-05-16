@@ -11,10 +11,10 @@
 - Create Cartoview Project which contains required files to run and configure Docker using this command:
 
 	``` python
-	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc <your_project_name>
+	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py <your_project_name>
 	```
 
-- Replace ```<your_project_name>``` with the desired name 
+- Replace ```<your_project_name>``` with the desired name
 
 - Go to your project Folder
 
@@ -23,7 +23,7 @@
 	 ```
 
 - Open ```docker-compose.yml``` and Look at the port numbers for GeoServer and Postges and change the number before the ```:``` this will be the port on your machine
-	
+
 	!!! tip "Tips"
 			- any file with ```.env``` EXTENSION Is a file that contains environment variables passed to specific container for example ```django.env``` file contains environment variables passed to Cartoview container so django can read these variables and use them
 			- default database username: ```cartologic``` and password: ```root```
@@ -45,14 +45,15 @@
 				SITEURL=http://192.168.99.100
 				ALLOWED_HOSTS=['*']
 				```
-		
+
 	!!! warning
 		- For windows Users Please Comment volumes lines of postgis Container only in ```docker-compose.yml``` by preceding the line with ```#``` something like this:
 			```python
 				#   volumes:
 				#      - pgdata:/var/lib/postgresql
 			```
-		
+		- if ```django-admin.py``` not working try ```django-admin```
+
 
 - Start Docker images(cartoview,geoserver,postgres) type :
 

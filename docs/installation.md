@@ -20,7 +20,7 @@
 
 - Don't Forget [Installation requirements](installation.md#installation-requirements)
 
-- Install [Geonode=2.5.15][1]
+- Install [Geonode=2.6][1]
 
 - Install CartoView Libraries
 
@@ -32,7 +32,7 @@
 - Install CartoView_Django Project
 
 	``` sh
-	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc <your_project_name>
+	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py <your_project_name>
 	```
 
 - Go to your Project Folder
@@ -101,7 +101,7 @@
   	- Install [nodejs](https://nodejs.org/en/) and then install [bower](https://bower.io/) we need them to install app_manager dependencies
 	- in this step we will install required files in your project folder type :
 		```sh
-		bower install 
+		bower install
 		```
 	- Collect Required files type:
 		```sh
