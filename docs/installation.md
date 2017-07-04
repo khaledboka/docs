@@ -9,22 +9,91 @@
 
 
 
+
 ##Install On Ubuntu linux
 - Follow these setps if you don't have Geonode  installed on your ubuntu system.<br/>
 
-- These instructions will install [Geonode][1] and Cartoview.
+- Run the following command to download required packages  
 
-	!!! note
+
+		 sudo apt-get update
+		 sudo apt-get install python-virtualenv python-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev libjpeg-dev libpq-dev libgdal-dev git default-jdk
+
+
+
+- Install Java 8 (needed by latest GeoServer 2.9)
+```
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+```
+## Geonode Installation
+
+ - Create and activate the virtualenv
+
+		virtualenv <your_virtual_env_name>
+		source <your_virtual_env_name>/bin/activate
+
+ - install pip
+
+		sudo apt-get install python-pip
+
+
+ - install geonode
+
+
+		pip install geonode
+		sudo apt-get install python-gdal
+
+
+ - Create a symbolic link in your virtualenv
+
+
+		ln -s /usr/lib/python2.7/dist-packages/osgeo  <your_virtual_env_name>/lib/python2.7/site-packages/osgeo   
+
+
+
+!!! note
 	    Verify your installation is completed by adding any layer in [Geonode][1]
 
 
 - Don't Forget [Installation requirements](installation.md#installation-requirements)
 
-- Install [Geonode=2.6][1]
+## Database Installation and Configuration
+- install postgreSQL database
+  ```
+  sudo apt-get install postgresql postgresql-contrib
+  ```
 
-- Install CartoView Libraries
 
-	``` python
+- install postgis
+
+	 ```
+	 sudo apt-get install postgis
+	 ```
+
+- install pgadmin
+
+
+
+		 sudo apt-get install pgadmin3
+
+!!! note
+		 for more Information on postgreSQL visit [postgresql]( https://www.postgresql.org/download/linux/ubuntu/)
+
+- database Configuration
+	- open pgadmin
+	- create two new databases cartoView and cartoview_datastore
+	- add postgis extension to the created databases by running the following sql query
+```
+		create extension postgis
+```
+
+##  CartoView Libraries Installation
+
+- install cartview
+
+	```
 	pip install cartoview
 	```
 
@@ -48,14 +117,13 @@
 	python manage.py makemigrations app_manager
 	```
 
-- create people Table
+- create account Table
 
 	``` sh
-	python manage.py migrate people
+	python manage.py migrate account
 	```
 
-	!!! bug
-		this command will fire an error ignore it
+
 
 - Create Rest of tables :
 
@@ -83,7 +151,8 @@
 		```
 
 !!! Note "Info"
-	 **(Optional)** if want to override any settings variable rename ```local_settings.py.sample``` to ```local_settings.py``` then override settings you want inside ```local_settings.py```
+	 **(Optional)** if want to override any settings variable  (for example to change the
+	  database password ,name or hostname ) rename``` local_settings.py.sample``` to ```local_settings.py``` then override settings you want inside ```local_settings.py```
 
 
 !!! warning
@@ -110,6 +179,18 @@
 	- Now you Can Install Apps from [Geo App Market][2]
 	- Go to ```apps``` tab and click ```manage apps``` Button and install app you want
 
+##install Geoserver
+- Tomcat installation [tomcat]( https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
+- Download Geoserver war file [here](http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war)
+- rename the war file to geoserver.war
+- copy the war file inside webapps directory in tomcat
+- restart tomcat server
+
+- !!! warning "Important"
+    cartview must be up and running 
+
+- !!! warning "Important"
+	in Production Configure Geoserver before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend)
 
 ##Install On Windows
 
@@ -162,14 +243,13 @@ Check GeoNode and Cartoview version compatibility in [PYPI][4] then install Cart
 	python manage.py makemigrations app_manager
 	```
 
-- create People table
+- create account table
 
 	``` sh
-	python manage.py migrate people
+	python manage.py migrate account
 	```
 
-	!!! bug
-		this command will fire an error ignore it
+
 
 - create rest of database tables
 	``` sh
