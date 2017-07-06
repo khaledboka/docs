@@ -15,7 +15,6 @@ pages:
         - 'Installation - windows': 'installation_windows.md'
         - 'Installation - docker': 'installation_docker.md'
         - 'Installation - vagrant': 'installation_vagrant.md'
-        - 'Docker': 'docker.md'
         - 'Install App': 'market.md'
         - 'Developers': 'developers.md'
         - 'Upload App to App Market': 'upload_to_app_market.md'
