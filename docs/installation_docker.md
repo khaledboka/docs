@@ -1,7 +1,7 @@
 #Cartoview
 
 ##Docker
-- be sure you installed all [requirements](installation_ubuntu.md#installation-requirements)
+- be sure you installed all [requirements](installation.md#installation-requirements)
 - Install [Docker][11]
 - For Windows User install ```make``` by
 	- installing [MSYS2](http://www.msys2.org/)
