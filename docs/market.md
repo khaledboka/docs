@@ -7,7 +7,8 @@
 		![Manage Apps](img/install_app.png)
 
 
-
+!!! warning
+       Restart the sever after installing the required Apps 
 [1]: https://github.com/GeoNode/geonode
 [2]: http://www.cartoview.org
 [3]: http://demo.cartoview.net

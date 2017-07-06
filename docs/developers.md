@@ -6,16 +6,22 @@
 
 - **Develope your own App**
 
-	- Create a new empty app from cartoview app template as follow in your cartoview project directory
+	- Create a new empty app from cartoview app template as follow in your cartoview project directory inside
 	``` python
+	cd apps
 	django-admin.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip <your_App_name>
 	```
 
-	- Edit cartoview_project/apps/apps.yml and add entry for your app
+	- Edit cartoview_project/apps/apps.yml and add entry for your app or create apps.yml file if not found and add the following lines
 	``` yml
 	- name: <app_name>
 	  active: true
 	  order: 0
+	```
+	- Add stores using the following command inside the cartview project directory
+	```
+	python manage.py loaddata app_stores.json
+
 	```
 	- Add the App to the database form django admin interface
 
@@ -33,15 +39,10 @@
 
 		![App Home](img/app_home.PNG)
 
-	- Make Changes to your App
-
-	- Now Zip your App and Upload it to [GeoApp Market][2]
-
-	- Login on [GeoApp Market][2] and click ```MYAPPS``` tab
-
-	- Click ```Submit New App``` Button and Fill Required Info
-
-	- Now Users can install your app
+	!!! success
+	    Congratulations, now you have created your first App on cartoview
+			you can upload it to cartoview App market to make use of the features
+			provided by cartoview App market
 
 [1]: https://github.com/GeoNode/geonode
 [2]: http://www.cartoview.org

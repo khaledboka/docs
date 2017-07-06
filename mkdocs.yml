@@ -11,13 +11,18 @@ pages:
         - 'About': 'index.md'
         - 'Key Features': 'keys.md'
         - 'Demos': 'demo.md'
-        - 'Frequently Asked Questions': 'QA.md'
-        - 'Installation': 'installation.md'
+        - 'Installation - ubuntu': 'installation_ubuntu.md'
+        - 'Installation - windows': 'installation_windows.md'
+        - 'Installation - docker': 'installation_docker.md'
+        - 'Installation - vagrant': 'installation_vagrant.md'
         - 'Docker': 'docker.md'
-        - 'Developers': 'developers.md'
-        - 'Contribute': 'contrib.md'
-        - 'Issues': 'issues.md'
         - 'Install App': 'market.md'
+        - 'Developers': 'developers.md'
+        - 'Upload App to App Market': 'upload_to_app_market.md'
+        - 'Contribute': 'contrib.md'
+        - 'Frequently Asked Questions': 'QA.md'
+        - 'Issues': 'issues.md'
+
 
 theme: 'material'
 extra:
@@ -27,7 +32,7 @@ extra:
   font:
     text: 'PT Sans'
     code: 'Source Code Pro'
-  
+
 markdown_extensions:
   - admonition
   - footnotes

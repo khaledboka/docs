@@ -1,7 +1,7 @@
 #Cartoview
 
 ##Docker
-- be sure you installed all [requirements](installation.md#installation-requirements)
+- be sure you installed all [requirements](installation_ubuntu.md#installation-requirements)
 - Install [Docker][11]
 - For Windows User install ```make``` by
 	- installing [MSYS2](http://www.msys2.org/)
@@ -61,20 +61,6 @@
 	make run
 	```
 
-- create  people table :
-
-	``` sh
-	make migrate_people
-	```
-
-	!!! bug
-		this command will fire an error ignore it
-
-- create rest of  tabels and collect static files :
-
-	``` sh
-	make static_db
-	```
 
 	!!! success "Success"
 		Now you can Access cartoview on ```http://localhost``` or ```http://<your_domain_or_ip>```

@@ -1,17 +1,29 @@
 #Cartoview
+
+### This document describes the installation of cartview with geonode Version 2.6.1
+
+!!! warning
+	in case of other versions of geonode these steps will not apply .
+
 ##Installation Requirements
 - Install [Python2.7](https://www.python.org/)
 
-- Install [1.8.7 <= Django <1.9a0](https://pypi.python.org/pypi/Django/1.8.7)
+- Install Django
+```
+sudo apt-get update
+sudo apt-get install python-django
+```
 
-	!!! attention "Docker users"
-	    - you need to install [docker-compose](https://docs.docker.com/compose/install/)
+!!! note
+    for more information on installation visit [1.8.7 <= Django <1.9a0](https://pypi.python.org/pypi/Django/1.8.7)
+
+!!! attention "Docker users"
+    - you need to install [docker-compose](https://docs.docker.com/compose/install/)
 
 
 
 
 ##Install On Ubuntu linux
-- Follow these setps if you don't have Geonode  installed on your ubuntu system.<br/>
 
 - Run the following command to download required packages  
 
@@ -20,33 +32,102 @@
 		 sudo apt-get install python-virtualenv python-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev libjpeg-dev libpq-dev libgdal-dev git default-jdk
 
 
+## Database Installation
+- install postgreSQL database
+	```
+	sudo apt-get install postgresql postgresql-contrib
+	```
 
+
+- install postgis ( extension to support geographic objects allowing location queries to be run in SQL. )
+
+	```
+	sudo apt-get install postgis
+	```
+
+
+
+		sudo apt-get install pgadmin3
+!!! note
+	    you can install pgadmin ( postgreSQL GUI tool using ): ``` sudo apt-get install pgadmin3```
+
+!!! note
+		for more Information on postgreSQL visit [postgresql](https://www.postgresql.org/download/linux/ubuntu/)
+
+## Database Configuration
+
+ - you will need to log into a user called postgres created by the installation to manage the database
+ ```
+ sudo -i -u postgres
+ ```
+ - change the postgres password
+ ```
+ psql
+ \password
+ ```
+ - Exit out of the PostgreSQL prompt by typing
+ ```
+ \q
+ ```
+ - create two new databases cartoView and cartoview_datastore
+ ```
+ createdb cartoview
+ createdb cartoview_datastore
+ ```
+
+!!! note
+     you can change the databases name but make sure to change thier names in the local_settings.py file in cartoview project directory
+ - add postgis extension to the created databases
+
+ ```
+ psql <database-name>
+ CREATE EXTENSION postgis;
+ ```
+
+!!! note
+    for more information on configuring the postgresql visit [postgreSQL](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04)
+
+##install Geoserver
 - Install Java 8 (needed by latest GeoServer 2.9)
 ```
 sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
-## Geonode Installation
 
- - Create and activate the virtualenv
+- Tomcat installation [tomcat]( https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
+- Download Geoserver war file [here](http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war)
+- rename the war file to geoserver.war
+- copy the war file inside webapps directory in tomcat
+- restart tomcat server
+
+- !!! warning "Important"
+    cartview must be up and running
+
+- !!! warning "Important"
+	in Production Configure Geoserver before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend)
+
+## Geonode 2.6.1 Installation
+ - Follow these setps if you don't have Geonode  installed on your ubuntu system.<br/>
+
+ - Create and activate the python virtual environment
 
 		virtualenv <your_virtual_env_name>
 		source <your_virtual_env_name>/bin/activate
 
- - install pip
+ - install pip ( a package management system used install and manage software packages written in Python )
 
 		sudo apt-get install python-pip
 
 
- - install geonode
+ - install geonode 2.6.1
 
 
-		pip install geonode
+		pip install geonode==2.6.1
 		sudo apt-get install python-gdal
 
 
- - Create a symbolic link in your virtualenv
+ - Create a symbolic link of osgeo in your virtualenv needed by gdal to run properly  
 
 
 		ln -s /usr/lib/python2.7/dist-packages/osgeo  <your_virtual_env_name>/lib/python2.7/site-packages/osgeo   
@@ -57,37 +138,9 @@ sudo apt-get install oracle-java8-installer
 	    Verify your installation is completed by adding any layer in [Geonode][1]
 
 
-- Don't Forget [Installation requirements](installation.md#installation-requirements)
-
-## Database Installation and Configuration
-- install postgreSQL database
-  ```
-  sudo apt-get install postgresql postgresql-contrib
-  ```
+- Don't Forget [Installation requirements](installation_ubuntu.md#installation-requirements)
 
 
-- install postgis
-
-	 ```
-	 sudo apt-get install postgis
-	 ```
-
-- install pgadmin
-
-
-
-		 sudo apt-get install pgadmin3
-
-!!! note
-		 for more Information on postgreSQL visit [postgresql]( https://www.postgresql.org/download/linux/ubuntu/)
-
-- database Configuration
-	- open pgadmin
-	- create two new databases cartoView and cartoview_datastore
-	- add postgis extension to the created databases by running the following sql query
-```
-		create extension postgis
-```
 
 ##  CartoView Libraries Installation
 
@@ -179,93 +232,10 @@ sudo apt-get install oracle-java8-installer
 	- Now you Can Install Apps from [Geo App Market][2]
 	- Go to ```apps``` tab and click ```manage apps``` Button and install app you want
 
-##install Geoserver
-- Tomcat installation [tomcat]( https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
-- Download Geoserver war file [here](http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war)
-- rename the war file to geoserver.war
-- copy the war file inside webapps directory in tomcat
-- restart tomcat server
-
-- !!! warning "Important"
-    cartview must be up and running 
-
-- !!! warning "Important"
-	in Production Configure Geoserver before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend)
-
-##Install On Windows
-
-- Install [Python2.7](https://www.python.org/)
-	- Make Sure to add the Python in the Path, as this is not setup by default
-	- check add python.exe to PATH
-		![python setup](img/python.png)
-		![python setup](img/python2.png)
-- Install Django 1.8.7 open cmd and type:
-
-	```sh
-	pip install django==1.8.7
-	```
-
-**We recommend to use Docker**
-
-- Follow [Docker Instructions](docker.md#docker)
-
-
-##Existing GeoNode Users
-Check GeoNode and Cartoview version compatibility in [PYPI][4] then install Cartoview
-
-- Requirements:
-	- GeoNode == 2.5.15
-
-	!!! attention
-		We will Support more version of Geonode Soon!!
-
-- install cartoview libraries
-
-	``` sh
-	pip install cartoview == <version>
-	```
-
-- Create Cartoview Project
-
-	``` sh
-	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc <your_project_name>
-	```
-
-- Go to your Project Folder
-
-	``` sh
-	cd <your_project_name>
-	```
-
-- detect Changes in app_manager
-
-	``` sh
-	python manage.py makemigrations app_manager
-	```
-
-- create account table
-
-	``` sh
-	python manage.py migrate account
-	```
 
 
 
-- create rest of database tables
-	``` sh
-	python manage.py migrate
-	```
 
-- Collect static Files
-
-	``` sh
-	python manage.py collectstatic --noinput
-	```
-
-- Now Development Server :
-	``` sh
-	python manage.py runserver 0.0.0.0:8000
-	```
 ##Deployment notes
 
 - !!! warning "Important"
