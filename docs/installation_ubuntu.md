@@ -88,6 +88,7 @@ sudo apt-get install python-django
     for more information on configuring the postgresql visit [postgreSQL](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04)
 
 ##install Geoserver
+
 - Install Java 8 (needed by latest GeoServer 2.9)
 ```
 sudo apt-add-repository ppa:webupd8team/java
@@ -95,12 +96,60 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
 
-- Tomcat installation [tomcat]( https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
-- Download Geoserver war file [here](http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war)
-- rename the war file to geoserver.war
-- copy the war file inside webapps directory in tomcat
-- restart tomcat server
+1) Download  [tomcat v9]( https://tomcat.apache.org/download-90.cgi)
 
+2) Extract the tar folder and rename to tomcat
+
+3) Download Geoserver war file [here](http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war)
+
+4) Rename the war file to geoserver.war
+
+5) Copy the war file inside webapps directory in tomcat
+
+6) Create tomcat user we will do this by editing the tomcat-users.xml file:
+
+
+			sudo nano path/to/tomcat/conf/tomcat-users.xml
+
+!!! note
+    make sure to change path/to/tomcat in the previous command with your tomcat path
+
+
+7) Paste the following line
+```<user username="admin" password="password"roles="manager-gui,admin-gui"/>
+```
+just before ```</tomcat-users > ```
+at the end of the file and change the username and password
+
+8) Edit context files in host-manager directory
+
+     sudo nano path/to/tomcat/webapps/host-manager/META-INF/context.xml
+
+9) Comment the line ``` <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> ``` by changing it to
+				 ```
+				 <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
+								 allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
+				 ```
+
+10) Edit context files in manager directory
+
+    sudo nano path/to/tomcat/webapps/manager/META-INF/context.xml
+
+11) Comment the line ``` <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+        allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> ```  by changing it to
+				```
+				<!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
+								allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
+				```  
+
+- start tomcat server
+
+   ``` sh path/to/your/tomcat/bin/startup.sh
+	 ```
+
+- !!! note
+      For more information on installation and Configuration of tomcat visit [tomcat](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
 - !!! warning "Important"
     cartview must be up and running
 
