@@ -17,7 +17,7 @@
 
 **We recommend to use Docker**
 
-- Follow [Docker Instructions](docker.md#docker)
+- Follow [Docker Instructions](installation_docker.md#docker)
 
 
 ##Existing GeoNode Users
