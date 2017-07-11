@@ -202,26 +202,26 @@ at the end of the file and change the username and password
 
 - Install CartoView_Django Project
 
-	``` sh
+	```
 	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py <your_project_name>
 	```
 
 - Go to your Project Folder
 
-	``` sh
+	```
 	cd <your_project_name>
 	```
 
 
 - Detect changes in ```app_manager``` App
 
-	``` sh
+	```
 	python manage.py makemigrations app_manager
 	```
 
 - create account Table
 
-	``` sh
+	```
 	python manage.py migrate account
 	```
 
@@ -229,26 +229,26 @@ at the end of the file and change the username and password
 
 - Create Rest of tables :
 
-	``` sh
+	```
 	python manage.py migrate
 	```
 
 - load default User
 
-	``` sh
+	```
 	python manage.py loaddata sample_admin.json
 	```
 
 - load default oauth app
 
-	``` sh
+	```
 	python manage.py loaddata json/default_oauth_apps.json
 	```
 
 - Test Server (Development)
 	- To start Development Server run this Command :
 
-		``` sh
+		```
 		python manage.py runserver 0.0.0.0:8000
 		```
 
@@ -265,17 +265,18 @@ at the end of the file and change the username and password
 
 	- Load Default Store
 
-		``` sh
+		```
 		python manage.py loaddata app_stores.json
 		```
 
   	- Install [nodejs](https://nodejs.org/en/) and then install [bower](https://bower.io/) we need them to install app_manager dependencies
 	- in this step we will install required files in your project folder type :
-		```sh
+		```
 		bower install
 		```
 	- Collect Required files type:
-		```sh
+		```
+
 		python manage.py collectstatic --noinput
 		```
 	- Now you Can Install Apps from [Geo App Market][2]
@@ -298,7 +299,7 @@ at the end of the file and change the username and password
 	After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future
 	- follow these steps to get apps working on nginx
 		- collect static files using this commands
-			``` sh
+			```
 			python manage.py collectstatic --noinput
 			```
 		- restart server now you should restart server after installing any app
