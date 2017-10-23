@@ -1,7 +1,18 @@
 #Cartoview
 
 ##Docker
-- be sure you installed all [requirements](installation_ubuntu.md#installation-requirements)
+
+- Install [Python2.7](https://www.python.org/download/releases/2.7/)
+	- Make Sure to add the Python in the Path, as this is not setup by default
+	- check add python.exe to PATH
+		![python setup](img/python.png)
+		![python setup](img/python2.png)
+- Install Django 1.8.7 open cmd and type:
+
+	```sh
+	pip install django==1.8.7
+	```
+    
 - Install [Docker][11]
 - For Windows User install ```make``` by
 	- installing [MSYS2](http://www.msys2.org/)
@@ -88,9 +99,9 @@
 ## Docker on Linux
 - you will Find all postgres data in pgdata folder
 
-[1]: https://github.com/GeoNode/geonode
+[1]: http://docs.geonode.org/en/master/tutorials/users/managing_layers/upload.html
 [2]: http://www.cartoview.org
-[3]: http://demo.cartoview.net
+[3]: http://try.cartoview.net
 [4]: https://pypi.python.org/pypi/cartoview
 [5]: https://github.com/cartologic/cartoview/issues
 [6]: http://cartoview.org/app/cartoview_map_viewer/

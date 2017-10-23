@@ -1,12 +1,11 @@
 #Cartoview
 
-### This document describes the installation of cartview with geonode Version 2.6.1
-
+### This document describes the installation of cartview with geonode Version 2.6.3
 !!! warning
 	in case of other versions of geonode these steps will not apply .
 
 ##Installation Requirements
-- Install [Python2.7](https://www.python.org/)
+- Install [Python2.7](https://www.python.org/download/releases/2.7/)
 
 - Install Django
 ```
@@ -89,7 +88,7 @@ sudo apt-get install python-django
 
 ##install Geoserver
 
-- Install Java 8 (needed by latest GeoServer 2.9)
+- Install Java 8 (needed GeoServer)
 ```
 sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
@@ -156,7 +155,7 @@ at the end of the file and change the username and password
 - !!! warning "Important"
 	in Production Configure Geoserver before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend)
 
-## Geonode 2.6.1 Installation
+## Geonode 2.6.3 Installation
  - Follow these setps if you don't have Geonode  installed on your ubuntu system.<br/>
 
  - Create and activate the python virtual environment
@@ -169,10 +168,10 @@ at the end of the file and change the username and password
 		sudo apt-get install python-pip
 
 
- - install geonode 2.6.1
+ - install geonode 2.6.3
 
 
-		pip install geonode==2.6.1
+		pip install geonode==2.6.3
 		sudo apt-get install python-gdal
 
 
@@ -260,8 +259,8 @@ at the end of the file and change the username and password
 !!! warning
 	Don't Forget to Change ```<your_project_name>``` to desired name.
 
-!!! important "Apps From Geo App Market"
-	- to Install apps from [Geo App Market][2]
+!!! important "Apps From GeoApp Market"
+	- to Install apps from [GeoApp Market][2]
 
 	- Load Default Store
 
@@ -303,7 +302,7 @@ at the end of the file and change the username and password
 			python manage.py collectstatic --noinput
 			```
 		- restart server now you should restart server after installing any app
-[1]: https://github.com/GeoNode/geonode
+[1]: http://docs.geonode.org/en/master/tutorials/users/managing_layers/upload.html
 [2]: http://www.cartoview.org
 [3]: http://demo.cartoview.net
 [4]: https://pypi.python.org/pypi/cartoview

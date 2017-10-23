@@ -4,7 +4,7 @@
 
 ##Install On Windows
 
-- Install [Python2.7](https://www.python.org/)
+- Install [Python2.7](https://www.python.org/download/releases/2.7/)
 	- Make Sure to add the Python in the Path, as this is not setup by default
 	- check add python.exe to PATH
 		![python setup](img/python.png)
@@ -15,19 +15,13 @@
 	pip install django==1.8.7
 	```
 
-**We recommend to use Docker**
-
-- Follow [Docker Instructions](installation_docker.md#docker)
-
 
 ##Existing GeoNode Users
 Check GeoNode and Cartoview version compatibility in [PYPI][4] then install Cartoview
 
 - Requirements:
-	- GeoNode == 2.5.15
+	- GeoNode == 2.6.3
 
-	!!! attention
-		We will Support more version of Geonode Soon!!
 
 - install cartoview libraries
 
@@ -79,7 +73,7 @@ Check GeoNode and Cartoview version compatibility in [PYPI][4] then install Cart
 ##Deployment notes
 
 - !!! warning "Important"
-	in Production Configure Geoserver before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend)
+	in Production Configure Geoserver before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/users/managing_layers/upload.html)
 
 - !!! warning "Important"
 	Once CartoView is installed is expected to install all apps from the app store automatically
@@ -93,7 +87,7 @@ Check GeoNode and Cartoview version compatibility in [PYPI][4] then install Cart
 			python manage.py collectstatic --noinput
 			```
 		- restart server now you should restart server after installing any app
-[1]: https://github.com/GeoNode/geonode
+[1]: http://docs.geonode.org/en/master/tutorials/users/managing_layers/upload.html
 [2]: http://www.cartoview.org
 [3]: http://demo.cartoview.net
 [4]: https://pypi.python.org/pypi/cartoview
