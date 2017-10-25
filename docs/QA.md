@@ -1,11 +1,11 @@
-#Cartoview
+#CartoView
 
 ##Frequently Asked Questions
 
 - <h3>What exactly is CartoView? Is it a replacement for GeoNode?</h3>
-	- CartoView is [Geo App market][2] for GeoNode. It is not a fork / improvement / reprlacement of Geonode, but rather additional code aimed at making it more extensible to integrate third party apps directly from the browser.
+	- CartoView is [Geo App market][2] for GeoNode. It is not a fork / improvement / reprlacement of Geonode, but rather additional code aimed to make it more extensible to integrate third party apps directly from the browser.
 
-- <h3>What are the goals of Cartoview?</h3>
+- <h3>What are the goals of CartoView?</h3>
 	- Sharing GIS Apps
 	- Provide apps for common tasks like visualizing and querying feature services.
 	- Extend the functions of the GeoNode SDI beyond data management
@@ -13,7 +13,7 @@
 	- Foster an ecosystem of apps extending easily deplyable and installable
 
 - <h3>Can I use CartoView with GeoNode Version 2.4 and earlier?</h3>
-	- CartoView starts working with GeoNode 2.6
+	- CartoView starts working with GeoNode 2.5
 
 - <h3>I have an idea! What should I do?</h3>
 	- Please file an issue. [Issues][5] are a great way to discuss new ideas, build consensus and talk about implementation details.
@@ -39,7 +39,7 @@
 [5]: https://github.com/cartologic/cartoview/issues
 [6]: http://cartoview.org/app/cartoview_map_viewer/
 [7]: http://cartoview.org/app/cartoview_feature_list/
-[8]: http://cartoview.org/app/cartoview_geonode_viewer/
+[8]: http://appstore.cartoview.net/app/cartoview_webapp_builder/
 [9]: https://twitter.com/ahmednosman
 [10]: https://twitter.com/cartoview
 [11]: https://www.docker.com/products/docker
