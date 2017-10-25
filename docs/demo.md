@@ -1,8 +1,7 @@
 #Cartoview
 
 ##Demos
-You can take cartoview for a test [here][3]
+You can try cartoview from [Here](http://try.cartoview.net).
 
-Create your account, load some test data and start authoring web mapping applicaitons
+Create your account, Load some test data and Start authoring Web Mapping Applicaitons.
 
-[3]: http://try.cartoview.net

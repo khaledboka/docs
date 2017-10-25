@@ -9,7 +9,7 @@ remote_name: io
 pages:
     -  Cartoview:
         - 'About': 'index.md'
-        - 'Key Features': 'keys.md'
+        - 'Key Features': 'key_features.md'
         - 'Demos': 'demo.md'
         - 'Installation - ubuntu': 'installation_ubuntu.md'
         - 'Installation - windows': 'installation_windows.md'
