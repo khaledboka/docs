@@ -1,7 +1,7 @@
-## **CartoView**
+## **Cartoview**
 
 
-![cartoview](img\cartoview-logo.PNG)
+![Cartoview](img\Cartoview-logo.png)
 
 
 

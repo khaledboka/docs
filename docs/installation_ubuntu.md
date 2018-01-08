@@ -1,6 +1,6 @@
-#CartoView
+#Cartoview
 
-## This document describes the Installation of CartoView on ubunto with GeoNode 2.6.3
+## This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3
     
 !!! warning
 	In case of any other version of GeoNode before 2.5 these steps will not be applicable.
@@ -65,14 +65,14 @@ sudo apt-get install python-django
  ```
  \q
  ```
- - Create two new databases cartoView and cartoview_datastore
+ - Create two new databases Cartoview and Cartoview_datastore
  ```
- createdb cartoview
- createdb cartoview_datastore
+ createdb Cartoview
+ createdb Cartoview_datastore
  ```
 
 !!! note
-     You can change the databases' name but make sure to change thier names in the local_settings.py file in cartoview project directory
+     You can change the databases' name but make sure to change thier names in the local_settings.py file in Cartoview project directory
  - Add PostGIS extension to the created databases
 
  ```
@@ -183,19 +183,23 @@ just before ```</tomcat-users > ``` and change the username and password
 
 
 
-##  CartoView Libraries Installation
+##  Cartoview Libraries Installation
 
-- Install CartoView
+- Install Cartoview
 
 	```
 	pip install cartoview
 	```
 
 
-- Install CartoView_Django Project
+- Install Cartoview_Django Project
 
 
-        django-admin.py startproject template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py <your_project_name>
+    
+
+		django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py   
+
+
        
 	
 
@@ -253,7 +257,7 @@ by running this Command :
 	Don't Forget to Change ```<your_project_name>``` to desired name.
 
 !!! important "Apps From GeoApp Market"
-	- To Install apps from [GeoApp Market](http://www.cartoview.org)
+	- To Install apps from [GeoApp Market](http://www.Cartoview.org)
 
 	- Load Default Store
 
@@ -284,10 +288,10 @@ by running this Command :
 	In Production Configure GeoServer before uploading layers from [here](http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend)
 
 - !!! warning "Important"
-	Once CartoView is installed it is expected to install all apps from the App Store automatically
-	At the moment CartoView will fully support Apache server only
-	For nginx deployments, CartoView will be able to detect new apps and get the updates, how ever to apply the updates, web server restart will be required to complete 	the process
-	CartoView will not be able to restart nginx when new apps are installed.
+	Once Cartoview is installed it is expected to install all apps from the App Store automatically
+	At the moment Cartoview will fully support Apache server only
+	For nginx deployments, Cartoview will be able to detect new apps and get the updates, how ever to apply the updates, web server restart will be required to complete 	the process
+	Cartoview will not be able to restart nginx when new apps are installed.
 	After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future
 	- Follow these steps to get apps working on nginx
 		- Collect static files using this commands

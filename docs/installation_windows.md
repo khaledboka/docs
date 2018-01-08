@@ -1,6 +1,6 @@
 #Cartoview
 
-### This document describes the Installation of CartoView with GeoNode on Windows 2.6.3
+### This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3
 
 !!! warning
 	In case of any other version of GeoNode before 2.5 these steps will not be applicable.
@@ -26,23 +26,23 @@
 
 
 ##Existing GeoNode Users
-Check GeoNode and CartoView version compatibility in [PYPI](https://pypi.python.org/pypi/cartoview) Then install CartoView
+Check GeoNode and Cartoview version compatibility in [PYPI](https://pypi.python.org/pypi/Cartoview) Then install Cartoview
 
 ## Requirements:
 
  GeoNode == 2.6.3
 
 
-- Install CartoView Libraries
+- Install Cartoview Libraries
 
 	``` sh
-	pip install cartoview == <version>
+	pip install Cartoview == <version>
 	```
 
-- Create CartoView Project
+- Create Cartoview Project
 
 	``` sh
-	django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc <your_project_name>
+	django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc <your_project_name>
 	```
 
 - Go to your Project Folder
@@ -86,10 +86,10 @@ Check GeoNode and CartoView version compatibility in [PYPI](https://pypi.python.
 	In Production Configure GeoServer before uploading layers from [Here](http://docs.geonode.org/en/master/tutorials/users/managing_layers/upload.html)
 
 - !!! notes "Notes"
-    - Once CartoView is installed it is expected to install all apps from the App store automatically
-	- At the moment CartoView will fully support Apache server only
-	For nginx deployments, CartoView will be able to detect new apps and get the updates, How ever to apply the updates, web server restart will be required to complete the process.
-	- CartoView will not be able to restart nginx when new apps are installed.
+    - Once Cartoview is installed it is expected to install all apps from the App store automatically
+	- At the moment Cartoview will fully support Apache server only
+	For nginx deployments, Cartoview will be able to detect new apps and get the updates, How ever to apply the updates, web server restart will be required to complete the process.
+	- Cartoview will not be able to restart nginx when new apps are installed.
 	- After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future
 	- Follow these steps to get apps working on nginx
 		- Collect static files using this commands

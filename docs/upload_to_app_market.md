@@ -1,11 +1,11 @@
 #Upload App to Cartoview GeoApp Market
 <hr/>
-<p>After creating your app as mentioned in [create app section](developers.md), you can upload your app to Carotview App Market to be shared with  CartoView community
- ,To make the best use of features provided by CartoView.
- Do the following shown steps to upload your app to CartoView App market
+<p>After creating your app as mentioned in [create app section](developers.md), you can upload your app to Carotview App Market to be shared with  Cartoview community
+ ,To make the best use of features provided by Cartoview.
+ Do the following shown steps to upload your app to Cartoview App market
  </p>
  
-1) To upload your App visit [cartoview App Market](http://www.cartoview.org)
+1) To upload your App visit [Cartoview App Market](http://www.Cartoview.org)
 
 ![](img/app_market.png)
 

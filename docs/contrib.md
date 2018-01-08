@@ -1,6 +1,6 @@
 #Cartoview
 
-##Contributing to CartoView
+##Contributing to Cartoview
 
 Please refer to each project's style Guidelines and Guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
 
