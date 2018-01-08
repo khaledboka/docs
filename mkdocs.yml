@@ -40,5 +40,5 @@ markdown_extensions:
   - meta
   - pymdownx.superfences
   - pymdownx.tasklist(custom_checkbox=true)
-#  - pymdownx.emoji:
-      #emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
