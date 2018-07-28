@@ -60,7 +60,7 @@ class StandardAppViews(AppViews):
 cd <geonode2.8.x>/geonode
 ```
 
-2. @settings.py | append the following lines the end of the files
+2. Append the following lines to `settings.py` file
 ```python
 # You can add the following line at the top of the file where all imports
 import cartoview
@@ -85,7 +85,7 @@ python manage.py loaddata app_stores.json
 
 ## Generate static files required by Cartoview
 
-> ### Install [NodeJS](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) and [BowerJS](https://bower.io/#install-bower) to be globally on your system
+> ### Install [NodeJS](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) and [BowerJS](https://bower.io/#install-bower) globally on your system
 
 1. Make a temperory directory where the files will be generated in
 ```sh
