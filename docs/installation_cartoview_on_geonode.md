@@ -31,7 +31,7 @@ pip install -e .
 ## Edit some code at Cartoview
 1. Navigate to Cartoview directory where the first step installed from
 
-2. Open the `views.py` in the directory `app_manager`
+2. Navigate to `app_manager` and Open the `views.py` file
 
 3. Replace the methode `view_app` at the class `StandardAppViews` by the following code
 ```python
