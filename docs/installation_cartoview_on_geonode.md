@@ -156,7 +156,7 @@ bower install
 7. Copy the generated `vendor` directory to the `static` directory inside GeoNode
 
 ```sh
-cp -r vedor/ <path_to_your_geonode_installation>/geonode/static/
+cp -r vendor/ <path_to_your_geonode_installation>/geonode/static/
 ```
 
 8. Navigate to geonode installation directory where you will find `manage.py` file, then run:
